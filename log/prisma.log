@@ -1,0 +1,369 @@
+2026-08-19 12:05:46 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-19 12:05:48 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:05:49 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:05:50 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:05:53 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:05:56 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:06:00 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-19 12:06:14 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:06:15 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-19 12:06:15 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:06:26 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 12:06:29 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-19 12:06:31 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 12:06:32 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:06:34 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:06:36 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:06:39 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:06:41 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 12:06:44 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-19 12:07:39 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:07:54 [Thread-37] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-19 12:07:54 [Thread-37] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-19 12:08:09 [Thread-38] INFO  com.prisma.report.ReportServiceImpl - Génération PDF de classe : 1 bulletins
+2026-08-19 12:08:11 [Thread-38] INFO  com.prisma.report.ReportServiceImpl - PDF de classe généré : /home/nisiniaina/Images/bulletins_classe_6a_1er_Trimestre_20260819_120811.pdf
+2026-08-19 12:11:39 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-19 12:11:39 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:11:40 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:11:40 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:11:44 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:11:46 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:11:51 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-19 12:12:04 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:12:04 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-19 12:12:04 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:12:10 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:13:17 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:13:23 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 12:14:38 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:14:42 [Thread-27] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 2
+2026-08-19 12:14:42 [Thread-27] WARN  c.p.service.impl.CalculServiceImpl - Aucun coefficient paramétré pour la classe 6a et la période 2eme Trimestre
+2026-08-19 12:14:42 [Thread-27] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-19 12:14:51 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:15:06 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:15:09 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 12:15:43 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-19 12:15:54 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 12:15:57 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:15:59 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:19:52 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-19 12:19:52 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-19 12:19:53 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:19:53 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-19 12:19:53 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-19 12:19:54 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-19 12:19:54 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-19 12:19:55 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-19 12:19:55 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:19:56 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:19:56 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:19:56 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:19:58 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:19:58 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 12:19:58 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 12:20:58 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:20:59 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 12:21:34 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:21:40 [Thread-61] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-19 12:21:40 [Thread-61] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-19 12:21:51 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:21:54 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:21:55 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:21:57 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 12:22:13 [JavaFX Application Thread] INFO  com.prisma.App - Fermeture de l'application PRISMA...
+2026-08-19 12:22:13 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 12:22:13 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 12:22:25 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-19 12:22:25 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:22:26 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:22:26 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:22:27 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:22:29 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:22:33 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-19 12:24:47 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:24:47 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-19 12:24:47 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:24:52 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 12:26:20 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:26:28 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:26:31 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 12:26:36 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-19 12:27:41 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 12:28:02 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:28:09 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:29:14 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:31:16 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-19 12:31:16 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-19 12:31:17 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:31:17 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-19 12:31:17 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-19 12:31:18 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-19 12:31:18 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-19 12:31:19 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-19 12:31:19 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:31:20 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:31:20 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:31:21 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:31:23 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:31:23 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 12:31:23 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 12:31:34 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:32:08 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:32:13 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:32:15 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:32:16 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 12:32:25 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:32:27 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 12:34:38 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-19 12:34:38 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-19 12:34:39 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:34:39 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-19 12:34:39 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-19 12:34:40 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-19 12:34:40 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-19 12:34:40 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-19 12:34:41 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:34:41 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:34:41 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:34:42 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:34:43 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:34:43 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 12:34:43 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 12:35:44 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-19 12:35:45 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:35:45 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:35:45 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:35:46 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:35:47 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:35:52 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-19 12:36:21 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:36:21 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-19 12:36:21 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:36:26 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 12:36:27 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 12:36:41 [JavaFX Application Thread] INFO  com.prisma.report.ReportServiceImpl - Génération bulletin PDF pour élève : NISINIAINA Fitiavantsoa
+2026-08-19 12:36:42 [JavaFX Application Thread] INFO  com.prisma.report.ReportServiceImpl - Bulletin PDF généré avec succès : /home/nisiniaina/Documents/bulletin_PRISMA-2025-0001_1er_Trimestre_20260819_123642.pdf
+2026-08-19 12:38:58 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-19 12:38:59 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:38:59 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:39:00 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:39:03 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:39:05 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:39:09 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-19 12:39:19 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:39:19 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-19 12:39:19 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:39:32 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:39:33 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:39:35 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:39:37 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:39:46 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 12:39:49 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:39:50 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 12:40:01 [JavaFX Application Thread] INFO  com.prisma.report.ReportServiceImpl - Génération bulletin PDF pour élève : NISINIAINA Fitiavantsoa
+2026-08-19 12:40:03 [JavaFX Application Thread] INFO  com.prisma.report.ReportServiceImpl - Bulletin PDF généré avec succès : /home/nisiniaina/Documents/bulletin_PRISMA-2025-0001_1er_Trimestre_20260819_124002.pdf
+2026-08-19 12:42:24 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-19 12:42:24 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-19 12:42:25 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:42:25 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-19 12:42:25 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-19 12:42:26 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-19 12:42:26 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-19 12:42:26 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-19 12:42:27 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:42:27 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:42:27 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:42:31 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:42:32 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:42:32 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 12:42:32 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 12:44:11 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-19 12:44:12 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:44:12 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:44:12 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:44:13 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:44:14 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:44:19 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-19 12:44:39 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:44:39 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-19 12:44:39 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:44:44 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 12:44:50 [Thread-12] INFO  com.prisma.report.ReportServiceImpl - Génération bulletin PDF pour élève : NISINIAINA Fitiavantsoa
+2026-08-19 12:44:52 [Thread-12] INFO  com.prisma.report.ReportServiceImpl - Bulletin PDF généré avec succès : /home/nisiniaina/Documents/bulletin_PRISMA-2025-0001_1er_Trimestre_20260819_124452.pdf
+2026-08-19 12:47:23 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-19 12:47:25 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 12:47:26 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 12:47:27 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 12:47:29 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 12:48:01 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 12:48:37 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-19 12:50:36 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-19 12:50:36 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-19 12:50:36 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:50:36 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-19 12:50:37 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-19 12:50:37 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-19 12:50:38 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-19 12:50:38 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-19 12:50:39 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:50:39 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:50:39 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:50:40 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:50:42 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:50:42 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 12:50:42 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 12:51:11 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-19 12:51:11 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-19 12:51:12 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:51:12 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-19 12:51:12 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-19 12:51:13 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-19 12:51:13 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-19 12:51:14 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-19 12:51:14 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:51:15 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:51:15 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:51:15 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:51:17 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:51:17 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 12:51:17 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 12:53:05 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-19 12:53:05 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-19 12:53:06 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:53:06 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-19 12:53:06 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-19 12:53:07 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-19 12:53:07 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-19 12:53:08 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-19 12:53:08 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:53:09 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:53:09 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:53:09 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:53:10 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:53:11 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 12:53:11 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 12:57:04 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-19 12:57:04 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-19 12:57:04 [JavaFX Application Thread] INFO  com.prisma.App - Fermeture de l'application PRISMA...
+2026-08-19 12:57:04 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 12:57:04 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 12:57:04 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:57:04 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-19 12:57:05 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-19 12:57:05 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-19 12:57:05 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-19 12:57:06 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-19 12:57:06 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:57:07 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:57:07 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:57:07 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:57:08 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:57:09 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 12:57:09 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 12:59:43 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-19 12:59:43 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 12:59:44 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 12:59:44 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 12:59:44 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 12:59:45 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 12:59:49 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-19 12:59:59 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 12:59:59 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-19 12:59:59 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 13:00:05 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 13:00:06 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 13:00:10 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 13:00:11 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 13:00:18 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-19 13:00:20 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 13:00:53 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-19 13:01:54 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 13:01:57 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 13:01:59 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 13:02:09 [JavaFX Application Thread] INFO  c.p.service.impl.EleveServiceImpl - Modification de l'élève ID: 2
+2026-08-19 13:02:14 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 13:02:15 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-19 13:02:21 [Thread-59] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 2, periodeId = 3
+2026-08-19 13:02:21 [Thread-59] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-19 13:02:24 [Thread-61] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 3
+2026-08-19 13:02:24 [Thread-61] WARN  c.p.service.impl.CalculServiceImpl - Aucun coefficient paramétré pour la classe 6a et la période 1er trimestre
+2026-08-19 13:02:24 [Thread-61] INFO  c.p.service.impl.CalculServiceImpl - Aucun élève affecté à la classe 6a
+2026-08-19 13:02:37 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 13:02:38 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 13:02:52 [Thread-67] INFO  com.prisma.report.ReportServiceImpl - Génération bulletin PDF pour élève : NISINIAINA Fitiavantsoa
+2026-08-19 13:02:54 [Thread-67] INFO  com.prisma.report.ReportServiceImpl - Bulletin PDF généré avec succès : /home/nisiniaina/Documents/bulletin_PRISMA-2025-0001_1er_Trimestre_20260819_130254.pdf
+2026-08-19 13:03:01 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-19 13:03:04 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-19 13:03:05 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-19 13:03:08 [JavaFX Application Thread] INFO  com.prisma.App - Fermeture de l'application PRISMA...
+2026-08-19 13:03:08 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 13:03:08 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 13:16:54 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-19 13:16:54 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-19 13:16:55 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 13:16:55 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-19 13:16:55 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-19 13:16:56 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-19 13:16:56 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-19 13:16:57 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-19 13:16:57 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 13:16:57 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 13:16:57 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 13:16:58 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 13:16:59 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 13:16:59 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 13:16:59 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 13:23:50 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-19 13:23:50 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 13:23:51 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 13:23:51 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 13:23:51 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 13:23:53 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 13:23:59 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-19 13:24:03 [JavaFX Application Thread] INFO  com.prisma.App - Fermeture de l'application PRISMA...
+2026-08-19 13:24:03 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 13:24:03 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 14:25:27 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-19 14:25:27 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-19 14:25:27 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 14:25:27 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-19 14:25:28 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-19 14:25:29 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-19 14:25:29 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-19 14:25:30 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-19 14:25:30 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 14:25:31 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 14:25:31 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 14:25:32 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 14:25:34 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 14:25:34 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 14:25:34 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 14:26:25 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-19 14:26:25 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-19 14:26:26 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 14:26:26 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-19 14:26:26 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-19 14:26:27 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-19 14:26:27 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-19 14:26:28 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-19 14:26:28 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 14:26:29 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 14:26:29 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 14:26:29 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 14:26:30 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 14:26:31 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 14:26:31 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-19 14:26:59 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-19 14:27:00 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-19 14:27:00 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-19 14:27:01 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-19 14:27:01 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-19 14:27:03 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-19 14:27:08 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-19 14:27:31 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-19 14:27:31 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-19 14:27:31 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-19 14:27:39 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-19 14:28:03 [JavaFX Application Thread] INFO  com.prisma.App - Fermeture de l'application PRISMA...
+2026-08-19 14:28:03 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-19 14:28:03 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.

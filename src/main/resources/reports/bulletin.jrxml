@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PRISMA BULLETIN — A4 Portrait, design fidèle à la maquette -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+              http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="bulletin_prisma"
+              pageWidth="595" pageHeight="842"
+              columnWidth="555" leftMargin="20" rightMargin="20"
+              topMargin="12" bottomMargin="12"
+              whenNoDataType="AllSectionsNoDetail"
+              isTitleNewPage="false">
+
+    <!-- PARAMÈTRES -->
+    <parameter name="PARAM_ANNEE_SCOLAIRE"   class="java.lang.String"/>
+    <parameter name="PARAM_TRIMESTRE"        class="java.lang.String"/>
+    <parameter name="PARAM_ELEVE_NOM"        class="java.lang.String"/>
+    <parameter name="PARAM_ELEVE_PRENOM"     class="java.lang.String"/>
+    <parameter name="PARAM_CLASSE"           class="java.lang.String"/>
+    <parameter name="PARAM_NUMERO_APPEL"     class="java.lang.String"/>
+    <parameter name="PARAM_TOTAL_COEF"       class="java.lang.String"/>
+    <parameter name="PARAM_TOTAL_POINTS"     class="java.lang.String"/>
+    <parameter name="PARAM_MOYENNE_GENERALE" class="java.lang.String"/>
+    <parameter name="PARAM_RANG"             class="java.lang.String"/>
+    <parameter name="PARAM_MENTION"          class="java.lang.String"/>
+    <parameter name="PARAM_APPRECIATION"     class="java.lang.String"/>
+    <parameter name="PARAM_LOGO_PATH"        class="java.lang.String"/>
+
+    <!-- CHAMPS (BulletinLigneBean) -->
+    <field name="numero"          class="java.lang.String"/>
+    <field name="matiere"         class="java.lang.String"/>
+    <field name="note"            class="java.lang.String"/>
+    <field name="coefficient"     class="java.lang.String"/>
+    <field name="moyennePonderee" class="java.lang.String"/>
+    <field name="appreciation"    class="java.lang.String"/>
+
+    <variable name="rowIndex" class="java.lang.Integer" resetType="Report" calculation="Count">
+        <variableExpression><![CDATA[Boolean.TRUE]]></variableExpression>
+    </variable>
+
+    <!-- ========================= TITRE (EN-TÊTE) ========================= -->
+    <title>
+        <band height="162" splitType="Stretch">
+            <!-- Logo -->
+            <image scaleImage="RetainShape" onErrorType="Blank">
+                <reportElement x="10" y="5" width="70" height="70"/>
+                <imageExpression><![CDATA[$P{PARAM_LOGO_PATH}]]></imageExpression>
+            </image>
+
+            <!-- Nom école -->
+            <staticText>
+                <reportElement x="90" y="5" width="400" height="28" forecolor="#1A2744"/>
+                <textElement><font fontName="SansSerif" size="20" isBold="true"/></textElement>
+                <text><![CDATA[COLLÈGE PRIVÉ PRISMA]]></text>
+            </staticText>
+            <!-- Slogan -->
+            <staticText>
+                <reportElement x="90" y="33" width="200" height="15" forecolor="#1A2744"/>
+                <textElement><font fontName="SansSerif" size="10" isItalic="true"/></textElement>
+                <text><![CDATA[Learn and Grow]]></text>
+            </staticText>
+            <!-- Ligne dorée -->
+            <line>
+                <reportElement x="90" y="52" width="420" height="1" forecolor="#D4A843"/>
+                <graphicElement><pen lineWidth="2.0"/></graphicElement>
+            </line>
+            <!-- Losange doré central -->
+            <staticText>
+                <reportElement x="280" y="44" width="14" height="14" forecolor="#D4A843"/>
+                <textElement textAlignment="Center"><font size="10" isBold="true"/></textElement>
+                <text><![CDATA[◆]]></text>
+            </staticText>
+
+            <!-- BULLETIN DE NOTES -->
+            <staticText>
+                <reportElement x="100" y="62" width="300" height="20" forecolor="#1A2744"/>
+                <textElement textAlignment="Center">
+                    <font fontName="SansSerif" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[BULLETIN DE NOTES]]></text>
+            </staticText>
+            <!-- Année scolaire -->
+            <textField>
+                <reportElement x="120" y="82" width="280" height="13" forecolor="#333333"/>
+                <textElement textAlignment="Center">
+                    <font fontName="SansSerif" size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA["ANNÉE SCOLAIRE : " + $P{PARAM_ANNEE_SCOLAIRE}]]></textFieldExpression>
+            </textField>
+
+            <!-- Badge Trimestre -->
+            <rectangle radius="4">
+                <reportElement x="410" y="62" width="145" height="35" backcolor="#1A2744" forecolor="#1A2744" mode="Opaque"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="415" y="64" width="135" height="14" forecolor="#FFFFFF"/>
+                <textElement textAlignment="Center">
+                    <font fontName="SansSerif" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[TRIMESTRE :]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="415" y="78" width="135" height="16" forecolor="#D4A843"/>
+                <textElement textAlignment="Center">
+                    <font fontName="SansSerif" size="11" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{PARAM_TRIMESTRE}]]></textFieldExpression>
+            </textField>
+
+            <!-- Cadre infos élève -->
+            <rectangle>
+                <reportElement x="0" y="105" width="555" height="55" forecolor="#1A2744" backcolor="#FFFFFF"/>
+                <graphicElement><pen lineWidth="1.0"/></graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="10" y="112" width="180" height="14" forecolor="#1A2744"/>
+                <textElement><font fontName="SansSerif" size="9" isBold="true"/></textElement>
+                <text><![CDATA[NOM ET PRÉNOM DE L'ÉLÈVE :]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="195" y="112" width="350" height="14" forecolor="#333333"/>
+                <textElement><font fontName="SansSerif" size="9"/></textElement>
+                <textFieldExpression><![CDATA[$P{PARAM_ELEVE_NOM} + " " + $P{PARAM_ELEVE_PRENOM}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="10" y="133" width="55" height="14" forecolor="#1A2744"/>
+                <textElement><font fontName="SansSerif" size="9" isBold="true"/></textElement>
+                <text><![CDATA[CLASSE :]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="68" y="133" width="200" height="14" forecolor="#333333"/>
+                <textElement><font fontName="SansSerif" size="9"/></textElement>
+                <textFieldExpression><![CDATA[$P{PARAM_CLASSE}]]></textFieldExpression>
+            </textField>
+            <staticText>
+                <reportElement x="310" y="133" width="65" height="14" forecolor="#1A2744"/>
+                <textElement><font fontName="SansSerif" size="9" isBold="true"/></textElement>
+                <text><![CDATA[NUMÉRO :]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="378" y="133" width="160" height="14" forecolor="#333333"/>
+                <textElement><font fontName="SansSerif" size="9"/></textElement>
+                <textFieldExpression><![CDATA[$P{PARAM_NUMERO_APPEL}]]></textFieldExpression>
+            </textField>
+        </band>
+    </title>
+
+    <!-- ========================= EN-TÊTE TABLEAU ========================= -->
+    <columnHeader>
+        <band height="28" splitType="Stretch">
+            <!-- Fond bleu marine -->
+            <rectangle>
+                <reportElement x="0" y="0" width="555" height="28" backcolor="#1A2744" forecolor="#1A2744" mode="Opaque"/>
+            </rectangle>
+            <!-- N° -->
+            <staticText>
+                <reportElement x="0" y="0" width="35" height="28" forecolor="#FFFFFF"/>
+                <box><pen lineWidth="0.5" lineColor="#2A3754"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[N°]]></text>
+            </staticText>
+            <!-- MATIÈRES -->
+            <staticText>
+                <reportElement x="35" y="0" width="155" height="28" forecolor="#FFFFFF"/>
+                <box><pen lineWidth="0.5" lineColor="#2A3754"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[MATIÈRES]]></text>
+            </staticText>
+            <!-- NOTE /20 -->
+            <staticText>
+                <reportElement x="190" y="0" width="75" height="28" forecolor="#FFFFFF"/>
+                <box><pen lineWidth="0.5" lineColor="#2A3754"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[NOTE /20]]></text>
+            </staticText>
+            <!-- COEFFICIENT -->
+            <staticText>
+                <reportElement x="265" y="0" width="80" height="28" forecolor="#FFFFFF"/>
+                <box><pen lineWidth="0.5" lineColor="#2A3754"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[COEFFICIENT]]></text>
+            </staticText>
+            <!-- MOYENNE PONDÉRÉE -->
+            <staticText>
+                <reportElement x="345" y="0" width="85" height="28" forecolor="#FFFFFF"/>
+                <box><pen lineWidth="0.5" lineColor="#2A3754"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="7" isBold="true"/>
+                </textElement>
+                <text><![CDATA[MOYENNE
+PONDÉRÉE]]></text>
+            </staticText>
+            <!-- APPRÉCIATION -->
+            <staticText>
+                <reportElement x="430" y="0" width="125" height="28" forecolor="#FFFFFF"/>
+                <box><pen lineWidth="0.5" lineColor="#2A3754"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="8" isBold="true"/>
+                </textElement>
+                <text><![CDATA[APPRÉCIATION]]></text>
+            </staticText>
+        </band>
+    </columnHeader>
+
+    <!-- ========================= LIGNES DE NOTES ========================= -->
+    <detail>
+        <band height="26" splitType="Stretch">
+            <!-- Fond alterné -->
+            <rectangle>
+                <reportElement x="0" y="0" width="555" height="26" backcolor="#F0F4FA" forecolor="#F0F4FA" mode="Opaque">
+                    <printWhenExpression><![CDATA[$V{rowIndex} % 2 == 0]]></printWhenExpression>
+                </reportElement>
+            </rectangle>
+            <!-- N° -->
+            <textField>
+                <reportElement x="0" y="0" width="35" height="26"/>
+                <box><pen lineWidth="0.3" lineColor="#CCCCCC"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{numero}]]></textFieldExpression>
+            </textField>
+            <!-- Matière -->
+            <textField textAdjust="StretchHeight">
+                <reportElement x="35" y="0" width="155" height="26"/>
+                <box leftPadding="5"><pen lineWidth="0.3" lineColor="#CCCCCC"/></box>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{matiere}]]></textFieldExpression>
+            </textField>
+            <!-- Note -->
+            <textField>
+                <reportElement x="190" y="0" width="75" height="26"/>
+                <box><pen lineWidth="0.3" lineColor="#CCCCCC"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="9" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{note}]]></textFieldExpression>
+            </textField>
+            <!-- Coefficient -->
+            <textField>
+                <reportElement x="265" y="0" width="80" height="26"/>
+                <box><pen lineWidth="0.3" lineColor="#CCCCCC"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="9"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{coefficient}]]></textFieldExpression>
+            </textField>
+            <!-- Moyenne pondérée -->
+            <textField>
+                <reportElement x="345" y="0" width="85" height="26" forecolor="#1A2744"/>
+                <box><pen lineWidth="0.3" lineColor="#CCCCCC"/></box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="9" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{moyennePonderee}]]></textFieldExpression>
+            </textField>
+            <!-- Appréciation -->
+            <textField textAdjust="StretchHeight">
+                <reportElement x="430" y="0" width="125" height="26"/>
+                <box leftPadding="4"><pen lineWidth="0.3" lineColor="#CCCCCC"/></box>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="7" isItalic="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{appreciation}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+
+    <!-- ========================= RÉSUMÉ (BAS DE PAGE) ========================= -->
+    <summary>
+        <band height="295" splitType="Stretch">
+            <!-- LIGNE TOTAL -->
+            <rectangle>
+                <reportElement x="0" y="0" width="555" height="26" backcolor="#E8ECF4" forecolor="#1A2744" mode="Opaque"/>
+                <graphicElement><pen lineWidth="0.5"/></graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="35" y="0" width="155" height="26" forecolor="#1A2744"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="10" isBold="true"/>
+                </textElement>
+                <text><![CDATA[TOTAL]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="265" y="0" width="80" height="26" forecolor="#1A2744"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="9" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{PARAM_TOTAL_COEF}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="345" y="0" width="85" height="26" forecolor="#1A2744"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="9" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{PARAM_TOTAL_POINTS}]]></textFieldExpression>
+            </textField>
+
+            <!-- 3 BLOCS RÉSUMÉ : MOYENNE | RANG | MENTION -->
+            <!-- Bloc Moyenne -->
+            <rectangle>
+                <reportElement x="0" y="36" width="178" height="60" forecolor="#1A2744" backcolor="#FFFFFF"/>
+                <graphicElement><pen lineWidth="1.0"/></graphicElement>
+            </rectangle>
+            <ellipse>
+                <reportElement x="10" y="46" width="35" height="35" backcolor="#1A2744" forecolor="#1A2744" mode="Opaque"/>
+            </ellipse>
+            <staticText>
+                <reportElement x="14" y="52" width="27" height="22" forecolor="#FFFFFF"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[▊]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="52" y="40" width="120" height="16" forecolor="#1A2744"/>
+                <textElement><font fontName="SansSerif" size="9" isBold="true"/></textElement>
+                <text><![CDATA[MOYENNE GÉNÉRALE]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="52" y="60" width="120" height="18" forecolor="#333333"/>
+                <textElement><font fontName="SansSerif" size="11" isBold="true"/></textElement>
+                <textFieldExpression><![CDATA[$P{PARAM_MOYENNE_GENERALE} + " /20"]]></textFieldExpression>
+            </textField>
+
+            <!-- Bloc Rang -->
+            <rectangle>
+                <reportElement x="188" y="36" width="178" height="60" forecolor="#1A2744" backcolor="#FFFFFF"/>
+                <graphicElement><pen lineWidth="1.0"/></graphicElement>
+            </rectangle>
+            <ellipse>
+                <reportElement x="198" y="46" width="35" height="35" backcolor="#1A2744" forecolor="#1A2744" mode="Opaque"/>
+            </ellipse>
+            <staticText>
+                <reportElement x="202" y="52" width="27" height="22" forecolor="#D4A843"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[🏆]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="242" y="40" width="115" height="16" forecolor="#1A2744"/>
+                <textElement textAlignment="Center"><font fontName="SansSerif" size="9" isBold="true"/></textElement>
+                <text><![CDATA[RANG]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="242" y="60" width="115" height="18" forecolor="#333333"/>
+                <textElement textAlignment="Center">
+                    <font fontName="SansSerif" size="10" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{PARAM_RANG}]]></textFieldExpression>
+            </textField>
+
+            <!-- Bloc Mention -->
+            <rectangle>
+                <reportElement x="377" y="36" width="178" height="60" forecolor="#1A2744" backcolor="#FFFFFF"/>
+                <graphicElement><pen lineWidth="1.0"/></graphicElement>
+            </rectangle>
+            <ellipse>
+                <reportElement x="387" y="46" width="35" height="35" backcolor="#1A2744" forecolor="#1A2744" mode="Opaque"/>
+            </ellipse>
+            <staticText>
+                <reportElement x="391" y="52" width="27" height="22" forecolor="#D4A843"/>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[★]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="430" y="40" width="115" height="16" forecolor="#1A2744"/>
+                <textElement textAlignment="Center"><font fontName="SansSerif" size="9" isBold="true"/></textElement>
+                <text><![CDATA[MENTION]]></text>
+            </staticText>
+            <textField>
+                <reportElement x="430" y="60" width="115" height="18" forecolor="#333333"/>
+                <textElement textAlignment="Center">
+                    <font fontName="SansSerif" size="10" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{PARAM_MENTION}]]></textFieldExpression>
+            </textField>
+
+            <!-- APPRÉCIATION GÉNÉRALE -->
+            <rectangle>
+                <reportElement x="0" y="105" width="555" height="62" forecolor="#1A2744" backcolor="#FFFFFF"/>
+                <graphicElement><pen lineWidth="0.8"/></graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="5" y="108" width="400" height="14" forecolor="#1A2744"/>
+                <textElement><font fontName="SansSerif" size="9" isBold="true" isUnderline="true"/></textElement>
+                <text><![CDATA[APPRÉCIATION GÉNÉRALE DU CONSEIL DE CLASSE]]></text>
+            </staticText>
+            <textField textAdjust="StretchHeight" isBlankWhenNull="true">
+                <reportElement x="10" y="125" width="535" height="38" forecolor="#333333"/>
+                <textElement><font fontName="SansSerif" size="8"/></textElement>
+                <textFieldExpression><![CDATA[$P{PARAM_APPRECIATION}]]></textFieldExpression>
+            </textField>
+
+            <!-- SIGNATURES -->
+            <!-- Professeur Principal -->
+            <rectangle>
+                <reportElement x="0" y="175" width="178" height="65" forecolor="#CCCCCC" backcolor="#FFFFFF"/>
+                <graphicElement><pen lineWidth="0.5"/></graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="5" y="178" width="168" height="12" forecolor="#1A2744"/>
+                <textElement><font fontName="SansSerif" size="8" isBold="true"/></textElement>
+                <text><![CDATA[PROFESSEUR PRINCIPAL]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="5" y="195" width="168" height="12" forecolor="#666666"/>
+                <textElement><font fontName="SansSerif" size="7"/></textElement>
+                <text><![CDATA[Nom : .......................................]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="5" y="212" width="168" height="12" forecolor="#666666"/>
+                <textElement><font fontName="SansSerif" size="7"/></textElement>
+                <text><![CDATA[Signature : ................................]]></text>
+            </staticText>
+
+            <!-- Chef d'Établissement -->
+            <rectangle>
+                <reportElement x="188" y="175" width="178" height="65" forecolor="#CCCCCC" backcolor="#FFFFFF"/>
+                <graphicElement><pen lineWidth="0.5"/></graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="193" y="178" width="168" height="12" forecolor="#1A2744"/>
+                <textElement><font fontName="SansSerif" size="8" isBold="true"/></textElement>
+                <text><![CDATA[CHEF D'ÉTABLISSEMENT]]></text>
+            </staticText>
+            <!-- Cachet central -->
+            <rectangle>
+                <reportElement x="230" y="195" width="96" height="40" forecolor="#1A2744" backcolor="#FFFFFF"/>
+                <graphicElement><pen lineWidth="1.5"/></graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="232" y="198" width="92" height="12" forecolor="#1A2744"/>
+                <textElement textAlignment="Center"><font fontName="SansSerif" size="7" isBold="true"/></textElement>
+                <text><![CDATA[COLLÈGE PRIVÉ]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="232" y="209" width="92" height="12" forecolor="#1A2744"/>
+                <textElement textAlignment="Center"><font fontName="SansSerif" size="8" isBold="true"/></textElement>
+                <text><![CDATA[PRISMA]]></text>
+            </staticText>
+            <line><reportElement x="245" y="221" width="66" height="1" forecolor="#1A2744"/></line>
+            <staticText>
+                <reportElement x="232" y="222" width="92" height="10" forecolor="#1A2744"/>
+                <textElement textAlignment="Center"><font fontName="SansSerif" size="6"/></textElement>
+                <text><![CDATA[DIRECTION]]></text>
+            </staticText>
+
+            <!-- Parents / Tuteur -->
+            <rectangle>
+                <reportElement x="377" y="175" width="178" height="65" forecolor="#CCCCCC" backcolor="#FFFFFF"/>
+                <graphicElement><pen lineWidth="0.5"/></graphicElement>
+            </rectangle>
+            <staticText>
+                <reportElement x="382" y="178" width="168" height="12" forecolor="#1A2744"/>
+                <textElement><font fontName="SansSerif" size="8" isBold="true"/></textElement>
+                <text><![CDATA[PARENTS / TUTEUR]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="382" y="195" width="168" height="12" forecolor="#666666"/>
+                <textElement><font fontName="SansSerif" size="7"/></textElement>
+                <text><![CDATA[Nom : .......................................]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="382" y="212" width="168" height="12" forecolor="#666666"/>
+                <textElement><font fontName="SansSerif" size="7"/></textElement>
+                <text><![CDATA[Signature : ................................]]></text>
+            </staticText>
+
+            <!-- PIED DE PAGE : Barre bleue avec contacts -->
+            <rectangle>
+                <reportElement x="0" y="252" width="555" height="28" backcolor="#1A2744" forecolor="#1A2744" mode="Opaque"/>
+            </rectangle>
+            <staticText>
+                <reportElement x="10" y="256" width="180" height="16" forecolor="#FFFFFF"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="7"/>
+                </textElement>
+                <text><![CDATA[📍 Adresse : ....................................]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="200" y="256" width="160" height="16" forecolor="#FFFFFF"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="7"/>
+                </textElement>
+                <text><![CDATA[📞 Tél. : ....................................]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="370" y="256" width="180" height="16" forecolor="#FFFFFF"/>
+                <textElement verticalAlignment="Middle">
+                    <font fontName="SansSerif" size="7"/>
+                </textElement>
+                <text><![CDATA[✉ Email : .................................]]></text>
+            </staticText>
+        </band>
+    </summary>
+
+</jasperReport>

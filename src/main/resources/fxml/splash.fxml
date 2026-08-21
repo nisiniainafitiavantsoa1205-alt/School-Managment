@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox
+    xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1"
+    alignment="CENTER"
+    spacing="20"
+    prefWidth="500"
+    prefHeight="320"
+    style="-fx-background-color: #0A1628; -fx-border-color: #FFD700; -fx-border-width: 1px;">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <!-- En-tête / Logo -->
+    <VBox alignment="CENTER" spacing="5">
+        <Label text="🎓" style="-fx-font-size: 50px;"/>
+        <Label text="COLLÈGE PRIVÉ PRISMA" style="-fx-text-fill: #FFD700; -fx-font-size: 24px; -fx-font-weight: bold; -fx-letter-spacing: 1px;"/>
+        <Label text="Système de Gestion Scolaire" style="-fx-text-fill: rgba(255,255,255,0.7); -fx-font-size: 13px;"/>
+    </VBox>
+
+    <Region prefHeight="15"/>
+
+    <!-- Barre de chargement & Status -->
+    <VBox spacing="10" alignment="CENTER" maxWidth="350">
+        <ProgressBar fx:id="progressBar" prefWidth="350" progress="0.0" style="-fx-accent: #FFD700;"/>
+        <Label fx:id="lblStatus" text="Initialisation des modules..." style="-fx-text-fill: rgba(255, 255, 255, 0.5); -fx-font-size: 11px;"/>
+    </VBox>
+
+    <Region prefHeight="10"/>
+
+    <Label text="PRISMA v1.0.0 — © 2025" style="-fx-text-fill: rgba(255,255,255,0.25); -fx-font-size: 9px;"/>
+
+</VBox>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.chart.*?>
+
+<VBox
+    xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.prisma.controller.DashboardController"
+    spacing="24"
+    style="-fx-background-color: transparent;"
+    VBox.vgrow="ALWAYS">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- RANGÉE DES CARTES DE STATISTIQUES (KPI) -->
+    <HBox spacing="20" alignment="CENTER">
+        <children>
+            <!-- Carte 1 : Élèves -->
+            <VBox styleClass="kpi-card" HBox.hgrow="ALWAYS" prefWidth="220" spacing="8">
+                <children>
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label text="🎓" styleClass="kpi-icon"/>
+                        <Label text="Élèves inscrits" styleClass="kpi-title"/>
+                    </HBox>
+                    <Label fx:id="lblTotalEleves" text="--" styleClass="kpi-value"/>
+                </children>
+            </VBox>
+
+            <!-- Carte 2 : Classes -->
+            <VBox styleClass="kpi-card" HBox.hgrow="ALWAYS" prefWidth="220" spacing="8">
+                <children>
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label text="🏫" styleClass="kpi-icon"/>
+                        <Label text="Classes actives" styleClass="kpi-title"/>
+                    </HBox>
+                    <Label fx:id="lblTotalClasses" text="--" styleClass="kpi-value"/>
+                </children>
+            </VBox>
+
+            <!-- Carte 3 : Matières -->
+            <VBox styleClass="kpi-card" HBox.hgrow="ALWAYS" prefWidth="220" spacing="8">
+                <children>
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label text="📚" styleClass="kpi-icon"/>
+                        <Label text="Matières enseignées" styleClass="kpi-title"/>
+                    </HBox>
+                    <Label fx:id="lblTotalMatieres" text="--" styleClass="kpi-value"/>
+                </children>
+            </VBox>
+
+            <!-- Carte 4 : Trimestre Courant -->
+            <VBox styleClass="kpi-card" HBox.hgrow="ALWAYS" prefWidth="220" spacing="8">
+                <children>
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label text="📅" styleClass="kpi-icon"/>
+                        <Label text="Trimestre actif" styleClass="kpi-title"/>
+                    </HBox>
+                    <Label fx:id="lblTrimestreActif" text="--" styleClass="kpi-value" style="-fx-font-size: 18px; -fx-padding: 8px 0 0 0;"/>
+                </children>
+            </VBox>
+        </children>
+    </HBox>
+
+    <!-- SECTION DES GRAPHIQUES -->
+    <HBox spacing="20" VBox.vgrow="ALWAYS" alignment="CENTER">
+        <children>
+            <!-- Graphique 1 : Nombre d'élèves par classe -->
+            <VBox styleClass="kpi-card" HBox.hgrow="ALWAYS" spacing="10">
+                <children>
+                    <Label text="Effectifs par classe" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px;"/>
+                    <BarChart fx:id="chartEffectifs" legendVisible="false" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                        <xAxis>
+                            <CategoryAxis label="Classe" tickLabelFill="WHITE"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis label="Nombre d'élèves" tickLabelFill="WHITE" minorTickVisible="false"/>
+                        </yAxis>
+                    </BarChart>
+                </children>
+            </VBox>
+
+            <!-- Graphique 2 : Répartition des notes par matières -->
+            <VBox styleClass="kpi-card" HBox.hgrow="ALWAYS" spacing="10">
+                <children>
+                    <Label text="Performance Moyenne des Classes" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px;"/>
+                    <LineChart fx:id="chartPerformances" legendVisible="false" style="-fx-background-color: transparent;" VBox.vgrow="ALWAYS">
+                        <xAxis>
+                            <CategoryAxis label="Classe" tickLabelFill="WHITE"/>
+                        </xAxis>
+                        <yAxis>
+                            <NumberAxis label="Moyenne Générale" tickLabelFill="WHITE" lowerBound="0" upperBound="20" autoRanging="false" tickUnit="2"/>
+                        </yAxis>
+                    </LineChart>
+                </children>
+            </VBox>
+        </children>
+    </HBox>
+
+</VBox>

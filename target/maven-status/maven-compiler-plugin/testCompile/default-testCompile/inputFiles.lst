@@ -1,0 +1,8 @@
+/home/nisiniaina/Documents/projet_dev/Prisma_projet/src/test/java/com/prisma/controller/LoginUiTest.java
+/home/nisiniaina/Documents/projet_dev/Prisma_projet/src/test/java/com/prisma/controller/NoteValidationTest.java
+/home/nisiniaina/Documents/projet_dev/Prisma_projet/src/test/java/com/prisma/database/DatabaseConnectionTest.java
+/home/nisiniaina/Documents/projet_dev/Prisma_projet/src/test/java/com/prisma/security/PasswordHasherTest.java
+/home/nisiniaina/Documents/projet_dev/Prisma_projet/src/test/java/com/prisma/service/CalculServiceTest.java
+/home/nisiniaina/Documents/projet_dev/Prisma_projet/src/test/java/com/prisma/service/EleveServiceTest.java
+/home/nisiniaina/Documents/projet_dev/Prisma_projet/src/test/java/com/prisma/service/SecurityServiceTest.java
+/home/nisiniaina/Documents/projet_dev/Prisma_projet/src/test/java/com/prisma/util/MathUtilTest.java

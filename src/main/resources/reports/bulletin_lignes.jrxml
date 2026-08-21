@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- PRISMA — Sous-rapport : lignes de notes du bulletin -->
+<!-- Étape 87 : Template des lignes de notes -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports
+              http://jasperreports.sourceforge.net/xsd/jasperreport.xsd"
+              name="bulletin_lignes"
+              pageWidth="390" pageHeight="330"
+              columnWidth="390" leftMargin="0" rightMargin="0"
+              topMargin="0" bottomMargin="0"
+              whenNoDataType="BlankPage">
+
+    <field name="numero"          class="java.lang.String"/>
+    <field name="matiere"         class="java.lang.String"/>
+    <field name="note"            class="java.lang.String"/>
+    <field name="coefficient"     class="java.lang.String"/>
+    <field name="moyennePonderee" class="java.lang.String"/>
+    <field name="appreciation"    class="java.lang.String"/>
+
+    <variable name="isEven" class="java.lang.Boolean" resetType="None"
+              calculation="Nothing">
+        <variableExpression><![CDATA[$V{REPORT_COUNT} % 2 == 0]]></variableExpression>
+    </variable>
+
+    <detail>
+        <band height="14" splitType="Stretch">
+            <!-- Fond alterné -->
+            <rectangle>
+                <reportElement x="0" y="0" width="390" height="14"
+                               backcolor="#EEF2FF" mode="Opaque">
+                    <printWhenExpression><![CDATA[$V{isEven}]]></printWhenExpression>
+                </reportElement>
+                <graphicElement><pen lineWidth="0"/></graphicElement>
+            </rectangle>
+
+            <!-- N° -->
+            <textField>
+                <reportElement x="0" y="1" width="20" height="12"
+                               style="DEFAULT" hTextAlign="Center"/>
+                <textElement><font fontName="SansSerif" size="7"/></textElement>
+                <textFieldExpression><![CDATA[$F{numero}]]></textFieldExpression>
+            </textField>
+
+            <!-- Matière -->
+            <textField textAdjust="StretchHeight">
+                <reportElement x="20" y="1" width="110" height="12"/>
+                <textElement><font fontName="SansSerif" size="7"/></textElement>
+                <textFieldExpression><![CDATA[$F{matiere}]]></textFieldExpression>
+            </textField>
+
+            <!-- Note /20 -->
+            <textField>
+                <reportElement x="130" y="1" width="40" height="12" hTextAlign="Center"/>
+                <textElement><font fontName="SansSerif" size="7" isBold="true"/></textElement>
+                <textFieldExpression><![CDATA[$F{note}]]></textFieldExpression>
+            </textField>
+
+            <!-- Coefficient -->
+            <textField>
+                <reportElement x="170" y="1" width="40" height="12" hTextAlign="Center"/>
+                <textElement><font fontName="SansSerif" size="7"/></textElement>
+                <textFieldExpression><![CDATA[$F{coefficient}]]></textFieldExpression>
+            </textField>
+
+            <!-- Moyenne pondérée -->
+            <textField>
+                <reportElement x="210" y="1" width="50" height="12" hTextAlign="Center" forecolor="#002F6C"/>
+                <textElement><font fontName="SansSerif" size="7" isBold="true"/></textElement>
+                <textFieldExpression><![CDATA[$F{moyennePonderee}]]></textFieldExpression>
+            </textField>
+
+            <!-- Appréciation -->
+            <textField textAdjust="StretchHeight">
+                <reportElement x="260" y="1" width="130" height="12"/>
+                <textElement><font fontName="SansSerif" size="6" isItalic="true"/></textElement>
+                <textFieldExpression><![CDATA[$F{appreciation}]]></textFieldExpression>
+            </textField>
+
+            <!-- Séparateur bas de ligne -->
+            <line>
+                <reportElement x="0" y="13" width="390" height="1" forecolor="#DDDDDD"/>
+            </line>
+        </band>
+    </detail>
+
+</jasperReport>

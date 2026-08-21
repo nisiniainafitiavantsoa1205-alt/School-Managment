@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox
+    xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.prisma.controller.ClasseController"
+    spacing="20"
+    style="-fx-background-color: transparent;"
+    HBox.hgrow="ALWAYS">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- SECTION DE GAUCHE : LISTE DES CLASSES ET CONFIGURATION GENERALE -->
+    <VBox spacing="15" prefWidth="550" minWidth="450">
+        <children>
+            <Label text="Gestion des Classes" style="-fx-text-fill: #FFD700; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+            
+            <!-- Tableau des classes -->
+            <TableView fx:id="tblClasses" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colNom" text="Classe" prefWidth="100"/>
+                    <TableColumn fx:id="colNiveau" text="Niveau" prefWidth="90"/>
+                    <TableColumn fx:id="colProfPrincipal" text="Professeur Principal" prefWidth="160"/>
+                    <TableColumn fx:id="colAnneeScolaire" text="Année Scolaire" prefWidth="110"/>
+                </columns>
+            </TableView>
+
+            <!-- Formulaire d'édition de classe -->
+            <VBox spacing="10" styleClass="kpi-card">
+                <padding>
+                    <Insets top="15" right="15" bottom="15" left="15"/>
+                </padding>
+                <children>
+                    <Label fx:id="lblClasseFormTitle" text="Créer / Modifier une Classe" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                    
+                    <GridPane hgap="10" vgap="10">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="50"/>
+                            <ColumnConstraints percentWidth="50"/>
+                        </columnConstraints>
+                        <children>
+                            <VBox spacing="4" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                <Label text="Nom de la classe *" styleClass="form-label"/>
+                                <TextField fx:id="txtNomClasse" styleClass="form-control" promptText="Ex: 6ème A"/>
+                            </VBox>
+                            <VBox spacing="4" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                <Label text="Niveau *" styleClass="form-label"/>
+                                <ComboBox fx:id="cmbNiveau" styleClass="form-control" maxWidth="Infinity" promptText="Sélectionner"/>
+                            </VBox>
+                            <VBox spacing="4" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                <Label text="Professeur Principal *" styleClass="form-label"/>
+                                <ComboBox fx:id="cmbProfPrincipal" styleClass="form-control" maxWidth="Infinity" promptText="Sélectionner (ou gérer dans Paramètres > Utilisateurs)"/>
+                            </VBox>
+                            <VBox spacing="4" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Label text="Année Scolaire *" styleClass="form-label"/>
+                                <TextField fx:id="txtAnneeScolaire" styleClass="form-control" promptText="2025-2026"/>
+                            </VBox>
+                        </children>
+                    </GridPane>
+
+                    <HBox spacing="10" alignment="CENTER_RIGHT" style="-fx-padding: 10px 0px 0px 0px;">
+                        <children>
+                            <Button fx:id="btnDeleteClasse" text="Supprimer" styleClass="btn-danger" onAction="#handleDeleteClasse"/>
+                            <Region HBox.hgrow="ALWAYS"/>
+                            <Button text="Réinitialiser" styleClass="btn-secondary" onAction="#handleResetClasseForm"/>
+                            <Button text="Enregistrer" styleClass="btn-primary" onAction="#handleSaveClasse"/>
+                        </children>
+                    </HBox>
+                </children>
+            </VBox>
+        </children>
+    </VBox>
+
+    <!-- SECTION DE DROITE : COEFFICIENTS DES MATIÈRES DE LA CLASSE SÉLECTIONNÉE -->
+    <VBox spacing="15" HBox.hgrow="ALWAYS" minWidth="450" styleClass="kpi-card">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        <children>
+            <Label text="Coefficients des Matières" style="-fx-text-fill: #FFD700; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+            <Label fx:id="lblSelectedClasseInfo" text="Sélectionnez une classe pour configurer ses matières." styleClass="text-muted"/>
+            
+            <Separator opacity="0.1"/>
+
+            <!-- Tableau des coefficients actuels -->
+            <TableView fx:id="tblCoefficients" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colCoefMatiere" text="Matière" prefWidth="180"/>
+                    <TableColumn fx:id="colCoefCode" text="Code" prefWidth="100"/>
+                    <TableColumn fx:id="colCoefValeur" text="Coefficient" prefWidth="120"/>
+                </columns>
+            </TableView>
+
+            <!-- Ajout/Modification d'association Matière-Coefficient -->
+            <HBox spacing="10" alignment="BOTTOM_LEFT">
+                <children>
+                    <VBox spacing="4" HBox.hgrow="ALWAYS">
+                        <HBox alignment="CENTER_LEFT" spacing="10">
+                            <children>
+                                <Label text="Associer une Matière *" styleClass="form-label"/>
+                                <Region HBox.hgrow="ALWAYS"/>
+                                <Button text="+ Nouvelle Matière" styleClass="btn-secondary" style="-fx-font-size: 11px; -fx-padding: 3px 8px;" onAction="#handleCreateNewMatiere"/>
+                            </children>
+                        </HBox>
+                        <ComboBox fx:id="cmbMatiere" styleClass="form-control" maxWidth="Infinity" promptText="Choisir une matière"/>
+                    </VBox>
+                    <VBox spacing="4" prefWidth="100">
+                        <Label text="Coeff. *" styleClass="form-label"/>
+                        <TextField fx:id="txtValeurCoef" styleClass="form-control" promptText="Ex: 2"/>
+                    </VBox>
+                    <Button text="Ajouter / Modifier" styleClass="btn-primary" style="-fx-padding: 8px 15px;" onAction="#handleSaveCoefficient"/>
+                </children>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <children>
+                    <Button fx:id="btnDeleteCoef" text="Dissocier la matière" styleClass="btn-danger" onAction="#handleDeleteCoefficient"/>
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+
+</HBox>

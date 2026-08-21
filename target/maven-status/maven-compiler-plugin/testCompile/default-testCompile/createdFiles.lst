@@ -1,0 +1,8 @@
+com/prisma/service/SecurityServiceTest.class
+com/prisma/security/PasswordHasherTest.class
+com/prisma/controller/NoteValidationTest.class
+com/prisma/database/DatabaseConnectionTest.class
+com/prisma/service/EleveServiceTest.class
+com/prisma/service/CalculServiceTest.class
+com/prisma/util/MathUtilTest.class
+com/prisma/controller/LoginUiTest.class

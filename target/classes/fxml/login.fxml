@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+
+<StackPane
+    xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.prisma.controller.LoginController"
+    stylesheets="@../css/login.css"
+    prefWidth="900"
+    prefHeight="620">
+
+    <!-- Fond dégradé sombre -->
+    <styleClass>root</styleClass>
+
+    <!-- Carte centrale de connexion -->
+    <VBox
+        alignment="CENTER"
+        spacing="0"
+        styleClass="login-card"
+        maxWidth="420"
+        maxHeight="560">
+
+        <!-- En-tête : Nom de l'école et slogan -->
+        <VBox alignment="CENTER" spacing="4">
+            <Label text="COLLÈGE PRIVÉ PRISMA"
+                   styleClass="login-school-name"/>
+            <Label text="Learn and Grow"
+                   styleClass="login-slogan"/>
+        </VBox>
+
+        <!-- Séparateur visuel -->
+        <Region prefHeight="28"/>
+
+        <!-- Titre du formulaire -->
+        <Label text="Connexion"
+               styleClass="login-title"/>
+
+        <Region prefHeight="32"/>
+
+        <!-- Champ Nom d'utilisateur -->
+        <VBox spacing="8">
+            <Label text="Nom d'utilisateur"
+                   styleClass="login-label"/>
+            <TextField
+                fx:id="usernameField"
+                promptText="Entrez votre identifiant"
+                styleClass="login-field"
+                onAction="#handleConnexion"/>
+        </VBox>
+
+        <Region prefHeight="18"/>
+
+        <!-- Champ Mot de passe -->
+        <VBox spacing="8">
+            <Label text="Mot de passe"
+                   styleClass="login-label"/>
+            <PasswordField
+                fx:id="passwordField"
+                promptText="••••••••"
+                styleClass="login-field"
+                onAction="#handleConnexion"/>
+        </VBox>
+
+        <Region prefHeight="8"/>
+
+        <!-- Message d'erreur (masqué par défaut) -->
+        <Label
+            fx:id="errorLabel"
+            text=""
+            styleClass="login-error"
+            visible="false"
+            wrapText="true"
+            maxWidth="320"
+            alignment="CENTER"/>
+
+        <Region prefHeight="24"/>
+
+        <!-- Bouton de connexion -->
+        <Button
+            fx:id="loginButton"
+            text="SE CONNECTER"
+            styleClass="login-button"
+            onAction="#handleConnexion"
+            defaultButton="true"/>
+
+        <!-- Indicateur de chargement (masqué par défaut) -->
+        <ProgressIndicator
+            fx:id="loadingIndicator"
+            visible="false"
+            prefWidth="32"
+            prefHeight="32"/>
+
+        <Region prefHeight="32"/>
+
+        <!-- Pied de page -->
+        <Label
+            text="PRISMA School Management v1.0.0 © 2025"
+            styleClass="login-footer"
+            alignment="CENTER"/>
+
+        <VBox.margin>
+            <Insets top="0" right="0" bottom="0" left="0"/>
+        </VBox.margin>
+    </VBox>
+
+</StackPane>

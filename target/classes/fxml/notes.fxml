@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox
+    xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.prisma.controller.NoteController"
+    spacing="15"
+    style="-fx-background-color: transparent;"
+    VBox.vgrow="ALWAYS">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- BARRE DE SÉLECTION (CLASSE, MATIÈRE, TRIMESTRE) -->
+    <HBox spacing="15" alignment="CENTER_LEFT" styleClass="kpi-card">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        <children>
+            <VBox spacing="4" HBox.hgrow="ALWAYS">
+                <Label text="Classe" styleClass="form-label"/>
+                <ComboBox fx:id="cmbClasse" styleClass="form-control" maxWidth="Infinity" promptText="Choisir une classe" onAction="#handleSelectionChange"/>
+            </VBox>
+
+            <VBox spacing="4" HBox.hgrow="ALWAYS">
+                <Label text="Matière" styleClass="form-label"/>
+                <ComboBox fx:id="cmbMatiere" styleClass="form-control" maxWidth="Infinity" promptText="Choisir une matière" onAction="#handleSelectionChange"/>
+            </VBox>
+
+            <VBox spacing="4" HBox.hgrow="ALWAYS">
+                <Label text="Trimestre" styleClass="form-label"/>
+                <ComboBox fx:id="cmbPeriode" styleClass="form-control" maxWidth="Infinity" promptText="Choisir un trimestre" onAction="#handleSelectionChange"/>
+            </VBox>
+        </children>
+    </HBox>
+
+    <!-- GRILLE DE SAISIE DE NOTES (TABLEUR) -->
+    <VBox spacing="10" VBox.vgrow="ALWAYS" styleClass="kpi-card">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        <children>
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <children>
+                    <Label text="Tableur de saisie des notes" style="-fx-text-fill: #FFD700; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <TextField fx:id="txtSearchEleve" promptText="Filtrer élève par nom / matricule..." styleClass="form-control" prefWidth="240"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label text="Astuce : Virgule (,) ou point (.) acceptés. Flèches haut/bas. Ctrl+V pour coller Excel." styleClass="text-muted" style="-fx-font-size: 11px;"/>
+                    <Button text="Coller Excel (Presse-papiers)" styleClass="btn-secondary" style="-fx-padding: 6px 12px;" onAction="#handlePasteFromClipboard"/>
+                </children>
+            </HBox>
+
+            <TableView fx:id="tblNotes" VBox.vgrow="ALWAYS" editable="true">
+                <columns>
+                    <TableColumn fx:id="colIndex" text="N°" prefWidth="50" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="colMatricule" text="Matricule" prefWidth="120" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="colNomPrenom" text="Nom &amp; Prénoms" prefWidth="250"/>
+                    <TableColumn fx:id="colNote" text="Note (0-20 ou A) *" prefWidth="150" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="colAbsent" text="Absent" prefWidth="80" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="colAppreciation" text="Appréciation" prefWidth="300"/>
+                </columns>
+            </TableView>
+
+            <!-- STATUT DE SAUVEGARDE ET ACTIONS -->
+            <HBox alignment="CENTER_LEFT" spacing="20">
+                <children>
+                    <Label fx:id="lblAutosaveStatus" text="Enregistrement automatique activé..." style="-fx-text-fill: #2ECC71; -fx-font-size: 12px; -fx-font-weight: bold;"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button text="Sauvegarder les modifications" styleClass="btn-primary" onAction="#handleManualSave"/>
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+
+</VBox>

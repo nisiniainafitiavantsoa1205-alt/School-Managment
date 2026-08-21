@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane
+    fx:id="rootPane"
+    xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.prisma.controller.MainController"
+    stylesheets="@../css/application.css"
+    prefWidth="1200"
+    prefHeight="750">
+
+    <!-- SIDEBAR DE NAVIGATION (A GAUCHE) -->
+    <left>
+        <VBox spacing="10" prefWidth="250" styleClass="sidebar" alignment="TOP_CENTER">
+            <padding>
+                <Insets top="30" right="15" bottom="20" left="15"/>
+            </padding>
+
+            <!-- Logo / En-tête -->
+            <VBox alignment="CENTER" spacing="5">
+                <Label text="PRISMA" styleClass="sidebar-title"/>
+                <Label text="School Management" styleClass="sidebar-subtitle"/>
+            </VBox>
+
+            <Separator opacity="0.1" prefWidth="200">
+                <VBox.margin>
+                    <Insets top="15" bottom="15"/>
+                </VBox.margin>
+            </Separator>
+
+            <!-- Liste des boutons de navigation -->
+            <VBox spacing="8" VBox.vgrow="ALWAYS">
+                <Button fx:id="btnDashboard" text="Tableau de bord" styleClass="sidebar-btn" maxWidth="Infinity" onAction="#handleNavDashboard"/>
+                <Button fx:id="btnEleves" text="Gestion des Élèves" styleClass="sidebar-btn" maxWidth="Infinity" onAction="#handleNavEleves"/>
+                <Button fx:id="btnClasses" text="Classes &amp; Coefficients" styleClass="sidebar-btn" maxWidth="Infinity" onAction="#handleNavClasses"/>
+                <Button fx:id="btnNotes" text="Notes &amp; Trimestres" styleClass="sidebar-btn" maxWidth="Infinity" onAction="#handleNavNotes"/>
+                <Button fx:id="btnBulletins" text="Bulletins &amp; Mention" styleClass="sidebar-btn" maxWidth="Infinity" onAction="#handleNavBulletins"/>
+                <Button fx:id="btnConfig" text="Paramètres &amp; Logs" styleClass="sidebar-btn" maxWidth="Infinity" onAction="#handleNavConfig"/>
+            </VBox>
+
+            <!-- Profil de l'utilisateur connecté à la base de la Sidebar -->
+            <VBox spacing="10" alignment="BOTTOM_CENTER">
+                <Separator opacity="0.1" prefWidth="200">
+                    <VBox.margin>
+                        <Insets bottom="10"/>
+                    </VBox.margin>
+                </Separator>
+
+                <HBox spacing="6" alignment="CENTER_LEFT">
+                    <padding>
+                        <Insets top="5" right="5" bottom="5" left="5"/>
+                    </padding>
+                    <VBox HBox.hgrow="ALWAYS">
+                        <Label fx:id="lblUsername" text="Utilisateur" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 13px;"/>
+                        <Label fx:id="lblRole" text="Rôle" style="-fx-text-fill: rgba(255,255,255,0.5); -fx-font-size: 11px;"/>
+                    </VBox>
+                    <Button text="Profil" styleClass="btn-secondary" style="-fx-padding: 6px 8px; -fx-font-size: 11px;" onAction="#handleEditProfile"/>
+                    <Button text="Déconnexion" styleClass="btn-secondary" style="-fx-padding: 6px 8px; -fx-font-size: 11px;" onAction="#handleDeconnexion"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </left>
+
+    <!-- ZONE DE CONTENU PRINCIPAL (AU CENTRE) -->
+    <center>
+        <VBox styleClass="main-content" VBox.vgrow="ALWAYS">
+            <!-- En-tête du contenu (Breadcrumbs / Chemin et Titre) -->
+            <HBox alignment="CENTER_LEFT" spacing="15">
+                <padding>
+                    <Insets bottom="20"/>
+                </padding>
+                <VBox HBox.hgrow="ALWAYS">
+                    <Label fx:id="lblBreadcrumb" text="Accueil / Tableau de bord" styleClass="page-subtitle"/>
+                    <Label fx:id="lblPageTitle" text="Tableau de bord" styleClass="page-title"/>
+                </VBox>
+                <!-- Barre de recherche globale et bouton Plein écran -->
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <TextField fx:id="txtGlobalSearch" promptText="Recherche de raccourcis ou d'élèves..." styleClass="form-control" prefWidth="250" onAction="#handleGlobalSearch"/>
+                    <Button text="⛶ Plein écran" styleClass="btn-secondary" style="-fx-padding: 6px 12px; -fx-font-size: 12px;" onAction="#toggleFullScreen"/>
+                </HBox>
+            </HBox>
+
+            <!-- Container dynamique pour charger les différentes pages FXML -->
+            <StackPane fx:id="contentArea" VBox.vgrow="ALWAYS" style="-fx-background-color: transparent;">
+                <!-- Les sous-vues seront insérées ici dynamiquement -->
+            </StackPane>
+        </VBox>
+    </center>
+
+</BorderPane>

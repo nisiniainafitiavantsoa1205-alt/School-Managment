@@ -1,0 +1,19 @@
+2026-07-07 13:31:59.832 CEST [32126] LOG:  démarrage de PostgreSQL 18.4 (Debian 18.4-1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 15.2.0-17) 15.2.0, 64-bit
+2026-07-07 13:31:59.832 CEST [32126] LOG:  en écoute sur IPv6, adresse « ::1 », port 5433
+2026-07-07 13:31:59.832 CEST [32126] LOG:  en écoute sur IPv4, adresse « 127.0.0.1 », port 5433
+2026-07-07 13:31:59.839 CEST [32126] FATAL:  n'a pas pu créer le fichier verrou « /var/run/postgresql/.s.PGSQL.5433.lock » : Permission non accordée
+2026-07-07 13:31:59.841 CEST [32126] LOG:  le système de base de données est arrêté
+2026-07-07 13:32:09.147 CEST [32236] LOG:  démarrage de PostgreSQL 18.4 (Debian 18.4-1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 15.2.0-17) 15.2.0, 64-bit
+2026-07-07 13:32:09.148 CEST [32236] LOG:  en écoute sur IPv6, adresse « ::1 », port 5433
+2026-07-07 13:32:09.148 CEST [32236] LOG:  en écoute sur IPv4, adresse « 127.0.0.1 », port 5433
+2026-07-07 13:32:09.160 CEST [32236] LOG:  écoute sur la socket Unix « /home/nisiniaina/Documents/projet_dev/Prisma_projet/db_data/.s.PGSQL.5433 »
+2026-07-07 13:32:09.177 CEST [32246] LOG:  le système de bases de données a été arrêté à 2026-07-07 13:31:18 CEST
+2026-07-07 13:32:09.193 CEST [32236] LOG:  le système de bases de données est prêt pour accepter les connexions
+2026-07-07 13:37:09.275 CEST [32244] LOG:  début du checkpoint : time
+2026-07-07 13:38:55.709 CEST [32244] LOG:  checkpoint complete: wrote 1060 buffers (6.5%), wrote 3 SLRU buffers; 1 WAL file(s) added, 0 removed, 0 recycled; write=106.304 s, sync=0.035 s, total=106.435 s; sync files=374, longest=0.003 s, average=0.001 s; distance=5121 kB, estimate=5121 kB; lsn=0/1C64750, redo lsn=0/1C646C0
+2026-07-07 14:29:37.377 CEST [32236] LOG:  a reçu une demande d'arrêt intelligent
+2026-07-07 14:29:37.384 CEST [32236] LOG:  processus en tâche de fond « logical replication launcher » (PID 32249) a quitté avec le code de sortie 1
+2026-07-07 14:29:37.384 CEST [32244] LOG:  arrêt en cours
+2026-07-07 14:29:37.391 CEST [32244] LOG:  début du checkpoint : shutdown immediate
+2026-07-07 14:29:37.418 CEST [32244] LOG:  checkpoint complete: wrote 0 buffers (0.0%), wrote 0 SLRU buffers; 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.034 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=4609 kB; lsn=0/1C64800, redo lsn=0/1C64800
+2026-07-07 14:29:37.437 CEST [32236] LOG:  le système de base de données est arrêté

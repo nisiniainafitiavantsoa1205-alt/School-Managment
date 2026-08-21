@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane
+    xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.prisma.controller.ConfigController"
+    tabClosingPolicy="UNAVAILABLE"
+    style="-fx-background-color: transparent;"
+    VBox.vgrow="ALWAYS"
+    stylesheets="@../css/application.css">
+
+    <!-- ONGLET 1 : PARAMÈTRES DE L'ÉCOLE -->
+    <Tab text="Paramètres de l'Établissement">
+        <content>
+            <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent; -fx-padding: 20;">
+                <content>
+                    <VBox spacing="20" maxWidth="600">
+                        <children>
+                            <Label text="Informations Générales" style="-fx-text-fill: #FFD700; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                            
+                            <VBox spacing="6">
+                                <Label text="Nom du collège" styleClass="form-label"/>
+                                <TextField fx:id="txtSchoolName" styleClass="form-control" promptText="Collège Privé PRISMA"/>
+                            </VBox>
+
+                            <VBox spacing="6">
+                                <Label text="Adresse" styleClass="form-label"/>
+                                <TextField fx:id="txtSchoolAddress" styleClass="form-control" promptText="Adresse physique de l'établissement"/>
+                            </VBox>
+
+                            <VBox spacing="6">
+                                <Label text="Téléphone" styleClass="form-label"/>
+                                <TextField fx:id="txtSchoolPhone" styleClass="form-control" promptText="+261 ..."/>
+                            </VBox>
+
+                            <VBox spacing="6">
+                                <Label text="Année Scolaire Courante" styleClass="form-label"/>
+                                <TextField fx:id="txtSchoolYear" styleClass="form-control" promptText="2025-2026"/>
+                            </VBox>
+
+                            <Separator opacity="0.1"/>
+
+                            <HBox spacing="15">
+                                <Button text="Enregistrer les paramètres" styleClass="btn-primary" onAction="#handleSaveSettings"/>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </content>
+            </ScrollPane>
+        </content>
+    </Tab>
+
+    <!-- ONGLET 2 : GESTION DES TRIMESTRES -->
+    <Tab text="Gestion des Trimestres">
+        <content>
+            <HBox spacing="20" style="-fx-padding: 20;">
+                <children>
+                    <!-- Liste des trimestres -->
+                    <VBox spacing="10" HBox.hgrow="ALWAYS">
+                        <children>
+                            <Label text="Trimestres / Périodes" style="-fx-text-fill: #FFD700; -fx-font-weight: bold; -fx-font-size: 14px;"/>
+                            <TableView fx:id="tblPeriodes" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn fx:id="colPeriodNom" text="Nom" prefWidth="150"/>
+                                    <TableColumn fx:id="colPeriodAnnee" text="Année Scolaire" prefWidth="120"/>
+                                    <TableColumn fx:id="colPeriodActive" text="Actif" prefWidth="80" style="-fx-alignment: CENTER;"/>
+                                    <TableColumn fx:id="colPeriodClosed" text="Clôturé" prefWidth="80" style="-fx-alignment: CENTER;"/>
+                                </columns>
+                            </TableView>
+                        </children>
+                    </VBox>
+
+                    <!-- Formulaire Trimestre -->
+                    <VBox spacing="15" prefWidth="300" styleClass="kpi-card" alignment="TOP_CENTER">
+                        <padding>
+                            <Insets top="15" right="15" bottom="15" left="15"/>
+                        </padding>
+                        <children>
+                            <Label fx:id="lblPeriodFormTitle" text="Ajouter / Modifier Période" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                            <Separator opacity="0.1"/>
+                            
+                            <VBox spacing="4" alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <Label text="Nom de la période *" styleClass="form-label"/>
+                                <TextField fx:id="txtPeriodNom" styleClass="form-control" promptText="Ex: 1er Trimestre"/>
+                            </VBox>
+
+                            <VBox spacing="4" alignment="CENTER_LEFT" maxWidth="Infinity">
+                                <Label text="Année Scolaire *" styleClass="form-label"/>
+                                <TextField fx:id="txtPeriodAnnee" styleClass="form-control" promptText="Ex: 2025-2026"/>
+                            </VBox>
+
+                            <HBox spacing="20" alignment="CENTER_LEFT">
+                                <children>
+                                    <CheckBox fx:id="chkPeriodActive" text="Période Active" style="-fx-text-fill: white;"/>
+                                    <CheckBox fx:id="chkPeriodClosed" text="Clôturée" style="-fx-text-fill: white;"/>
+                                </children>
+                            </HBox>
+
+                            <Separator opacity="0.1"/>
+
+                            <HBox spacing="10" alignment="CENTER_RIGHT" maxWidth="Infinity">
+                                <children>
+                                    <Button text="Nouveau" styleClass="btn-secondary" onAction="#handleNewPeriod"/>
+                                    <Button text="Enregistrer" styleClass="btn-primary" onAction="#handleSavePeriod"/>
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </HBox>
+        </content>
+    </Tab>
+
+    <!-- ONGLET 3 : GESTION DES UTILISATEURS -->
+    <Tab text="Gestion des Utilisateurs">
+        <content>
+            <HBox spacing="20" style="-fx-padding: 20;">
+                <children>
+                    <!-- Liste des utilisateurs -->
+                    <VBox spacing="10" HBox.hgrow="ALWAYS">
+                        <children>
+                            <Label text="Comptes Utilisateurs" style="-fx-text-fill: #FFD700; -fx-font-weight: bold; -fx-font-size: 14px;"/>
+                            <TableView fx:id="tblUsers" VBox.vgrow="ALWAYS">
+                                <columns>
+                                    <TableColumn fx:id="colUserUsername" text="Identifiant" prefWidth="120"/>
+                                    <TableColumn fx:id="colUserEmail" text="Adresse e-mail" prefWidth="180"/>
+                                    <TableColumn fx:id="colUserRole" text="Rôle" prefWidth="130"/>
+                                    <TableColumn fx:id="colUserActive" text="Actif" prefWidth="80" style="-fx-alignment: CENTER;"/>
+                                </columns>
+                            </TableView>
+                        </children>
+                    </VBox>
+
+                    <!-- Formulaire Utilisateur -->
+                    <VBox spacing="12" prefWidth="320" styleClass="kpi-card">
+                        <padding>
+                            <Insets top="15" right="15" bottom="15" left="15"/>
+                        </padding>
+                        <children>
+                            <Label fx:id="lblUserFormTitle" text="Créer / Modifier Utilisateur" style="-fx-text-fill: white; -fx-font-weight: bold;" alignment="CENTER"/>
+                            <Separator opacity="0.1"/>
+
+                            <VBox spacing="4">
+                                <Label text="Identifiant *" styleClass="form-label"/>
+                                <TextField fx:id="txtUserUsername" styleClass="form-control" promptText="Identifiant"/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label fx:id="lblUserPasswordLabel" text="Mot de passe *" styleClass="form-label"/>
+                                <PasswordField fx:id="txtUserPassword" styleClass="form-control" promptText="Nouveau mot de passe"/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label text="Adresse Email" styleClass="form-label"/>
+                                <TextField fx:id="txtUserEmail" styleClass="form-control" promptText="email@prisma.com"/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label text="Rôle *" styleClass="form-label"/>
+                                <ComboBox fx:id="cmbUserRole" styleClass="form-control" maxWidth="Infinity" promptText="Sélectionner"/>
+                            </VBox>
+
+                            <CheckBox fx:id="chkUserActive" text="Compte Activé" style="-fx-text-fill: white;"/>
+
+                            <Separator opacity="0.1"/>
+
+                            <HBox spacing="10" alignment="CENTER_RIGHT">
+                                <children>
+                                    <Button text="Nouveau" styleClass="btn-secondary" onAction="#handleNewUser"/>
+                                    <Button text="Enregistrer" styleClass="btn-primary" onAction="#handleSaveUser"/>
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+                </children>
+            </HBox>
+        </content>
+    </Tab>
+
+    <!-- ONGLET 4 : BASE DE DONNÉES (SAUVEGARDE & RESTAURATION) -->
+    <Tab text="Base de données (Sauvegarde)">
+        <content>
+            <VBox spacing="20" style="-fx-padding: 30;">
+                <children>
+                    <Label text="Sauvegarde &amp; Restauration" style="-fx-text-fill: #FFD700; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+                    <Label text="Ces outils vous permettent de sauvegarder les données locales ou de restaurer un état précédent de l'établissement." styleClass="text-muted" wrapText="true"/>
+                    
+                    <Separator opacity="0.1"/>
+
+                    <HBox spacing="20" alignment="CENTER_LEFT">
+                        <children>
+                            <Button text="Créer un point de sauvegarde (Export SQL)" styleClass="btn-primary" onAction="#handleBackup"/>
+                            <Button text="Restaurer à partir d'un fichier..." styleClass="btn-secondary" onAction="#handleRestore"/>
+                        </children>
+                    </HBox>
+
+                    <Separator opacity="0.1"/>
+
+                    <Label text="Historique des sauvegardes récentes" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 14px;"/>
+                    <TableView fx:id="tblSauvegardes" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="colBackupName" text="Fichier" prefWidth="250"/>
+                            <TableColumn fx:id="colBackupDate" text="Date de sauvegarde" prefWidth="180"/>
+                            <TableColumn fx:id="colBackupSize" text="Taille" prefWidth="100"/>
+                            <TableColumn fx:id="colBackupStatus" text="Statut" prefWidth="120"/>
+                        </columns>
+                    </TableView>
+                </children>
+            </VBox>
+        </content>
+    </Tab>
+
+    <!-- ONGLET 5 : LOGS D'AUDIT -->
+    <Tab text="Journaux d'Audit">
+        <content>
+            <VBox spacing="15" style="-fx-padding: 20;" VBox.vgrow="ALWAYS">
+                <children>
+                    <HBox alignment="CENTER_LEFT" spacing="15">
+                        <children>
+                            <Label text="Activités récentes du système" style="-fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 15px;" HBox.hgrow="ALWAYS"/>
+                            <Button text="Rafraîchir" styleClass="btn-secondary" style="-fx-padding: 6px 14px;" onAction="#handleRefreshLogs"/>
+                        </children>
+                    </HBox>
+                    <TableView fx:id="tblLogs" VBox.vgrow="ALWAYS">
+                        <columns>
+                            <TableColumn fx:id="colLogDate" text="Date &amp; Heure" prefWidth="180"/>
+                            <TableColumn fx:id="colLogUser" text="Utilisateur" prefWidth="150"/>
+                            <TableColumn fx:id="colLogAction" text="Action" prefWidth="180"/>
+                            <TableColumn fx:id="colLogDetails" text="Détails" prefWidth="400"/>
+                        </columns>
+                    </TableView>
+                </children>
+            </VBox>
+        </content>
+    </Tab>
+
+</TabPane>

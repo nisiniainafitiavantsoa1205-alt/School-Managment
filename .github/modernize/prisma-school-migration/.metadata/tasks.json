@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Migration tasks for Prisma School application to Azure Cloud-Ready Java application",
+  "tasks": [
+    {
+      "id": "001-transform-migration-mi-postgresql",
+      "type": "transform",
+      "description": "Secure Azure Database for PostgreSQL with Managed Identity",
+      "reason": "Enable passwordless authentication to Azure PostgreSQL database using managed identity, improving security and removing hardcoded credentials.",
+      "requirements": "Migrate from local PostgreSQL JDBC connection with password-based authentication to Azure Database for PostgreSQL with managed identity authentication. Update Spring Cloud Azure dependencies and datasource configuration to use managed identity. Addresses issues: PostgreSQL database found.",
+      "kbId": "mi-postgresql",
+      "skills": [
+        {
+          "name": "migration-mi-postgresql",
+          "location": "builtin"
+        }
+      ],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      }
+    },
+    {
+      "id": "002-transform-configuration-management",
+      "type": "transform",
+      "description": "Configure System Environment Variables",
+      "reason": "Externalize configuration from code to environment variables for cloud-native deployment and better security.",
+      "requirements": "Replace hardcoded configuration values with system environment variables. Update application to read configuration from environment variables instead of properties files or code. Addresses issues: Environment variables/system properties.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      }
+    },
+    {
+      "id": "003-transform-jakarta-jpa-migration",
+      "type": "transform",
+      "description": "Migrate Jakarta JPA to Azure",
+      "reason": "Ensure compatibility with Azure cloud environment and modern Java standards by updating Jakarta Persistence (JPA) APIs.",
+      "requirements": "Update Jakarta Persistence (JPA) configuration and usage to work with Azure cloud environment. Ensure JPA mappings and queries are compatible with Azure SQL/PostgreSQL. Addresses issues: Detects usage of Jakarta Persistence (JPA) APIs.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      }
+    },
+    {
+      "id": "004-containerization",
+      "type": "containerization",
+      "description": "Containerize Java Application for Container Readiness",
+      "reason": "Enable deployment to Azure Container Apps and Azure Kubernetes Service by containerizing the application with Docker.",
+      "requirements": "Create Dockerfile for the Java application with proper multi-stage builds, appropriate base image, and security best practices. Ensure application runs correctly in container environment. Addresses issues: No Dockerfile found.",
+      "kbId": "containerization-copilot-agent",
+      "skills": [
+        {
+          "name": "containerization",
+          "location": "builtin"
+        }
+      ],
+      "successCriteria": {
+        "passBuild": "true",
+        "containerImageBuilds": "true"
+      }
+    },
+    {
+      "id": "005-transform-jni-native-code",
+      "type": "transform",
+      "description": "Build Native Process into Container Image",
+      "reason": "Ensure native code dependencies and JNI implementations are properly packaged and functional in containerized environment.",
+      "requirements": "Build and package native processes and JNI code into the container image. Ensure all native dependencies are available in the container at runtime. Handle native library loading and path configuration. Addresses issues: Java Native Processes (JNI native code).",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "containerImageBuilds": "true"
+      }
+    },
+    {
+      "id": "006-transform-local-files-azure-storage",
+      "type": "transform",
+      "description": "Migrate to Azure Storage Account File Share mounts",
+      "reason": "Replace local file system access with Azure Storage File Shares for scalable, cloud-native file storage.",
+      "requirements": "Migrate file I/O operations from local file system (java.io and java.nio) to Azure Storage Account File Share mounts. Update code to use mounted Azure Storage paths (${AZURE_MOUNT_PATH:/mnt/azure}). Replace local file paths with cloud-based storage references. Addresses issues: File system - Java IO; File system - Java NIO.",
+      "kbId": "local-files-to-mounted-azure-storage",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      }
+    },
+    {
+      "id": "007-transform-localhost-resources",
+      "type": "transform",
+      "description": "Migrate the Local Resource to Azure",
+      "reason": "Remove localhost dependencies and migrate local resource access to Azure cloud services.",
+      "requirements": "Replace localhost resource access (JDBC localhost connections, local service calls) with Azure cloud services. Update connection strings to use Azure cloud endpoints instead of localhost. Addresses issues: Local JDBC Calls; Localhost Usage.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      }
+    },
+    {
+      "id": "008-transform-logging-console",
+      "type": "transform",
+      "description": "Migrate to Console Logging",
+      "reason": "Enable cloud-native logging by migrating from file-based logging to console output for container/Kubernetes environments.",
+      "requirements": "Remove file-based appenders from logging configuration (logback, logging.xml) and configure all logging output to console/stdout. Ensure logs are properly structured for cloud aggregation. Addresses issues: Avoid File System Logging in Configuration.",
+      "kbId": "log-to-console",
+      "skills": [
+        {
+          "name": "migration-log-to-console",
+          "location": "builtin"
+        }
+      ],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      }
+    },
+    {
+      "id": "009-validate-encoding",
+      "type": "transform",
+      "description": "Check Encoding in the Code",
+      "reason": "Verify and document character encoding handling to ensure consistency across cloud and local environments.",
+      "requirements": "Review and verify encoding handling in Java code (java.io constructors, character encoding specifications). Ensure UTF-8 encoding is consistently used throughout the application. Document any encoding-specific requirements. Addresses issues: The 'java.io' constructor defaults to UTF-8.",
+      "skills": [],
+      "successCriteria": {
+        "passBuild": "true",
+        "passUnitTests": "true"
+      }
+    }
+  ],
+  "metadata": {
+    "planName": "Prisma School Cloud Migration Plan",
+    "projectName": "prisma-school",
+    "language": "java",
+    "createdAt": "2026-07-13T09:45:00Z",
+    "version": "1.0"
+  }
+}

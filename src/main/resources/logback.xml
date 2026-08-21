@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Dossier de stockage des fichiers logs -->
+    <property name="LOG_DIR" value="log" />
+
+    <!-- 1. Configuration de la Console (STDOUT) -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- 2. Configuration du Fichier Journal Tournant (Rolling File) -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_DIR}/prisma.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- Rotation quotidienne du fichier log -->
+            <fileNamePattern>${LOG_DIR}/prisma-%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- Conservation des logs sur 30 jours -->
+            <maxHistory>30</maxHistory>
+            <!-- Limite totale de taille des archives de log -->
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Niveau par défaut pour tous les packages de l'application -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+        <appender-ref ref="FILE" />
+    </root>
+
+    <!-- Configuration spécifique pour atténuer le bruit d'Hibernate -->
+    <logger name="org.hibernate" level="WARN" />
+    <logger name="org.postgresql" level="WARN" />
+
+</configuration>

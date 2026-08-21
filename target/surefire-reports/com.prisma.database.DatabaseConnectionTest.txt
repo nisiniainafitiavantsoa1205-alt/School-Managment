@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.prisma.database.DatabaseConnectionTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.892 s -- in com.prisma.database.DatabaseConnectionTest

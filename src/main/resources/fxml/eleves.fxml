@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<HBox
+    xmlns="http://javafx.com/javafx/21"
+    xmlns:fx="http://javafx.com/fxml/1"
+    fx:controller="com.prisma.controller.EleveController"
+    spacing="20"
+    style="-fx-background-color: transparent;"
+    HBox.hgrow="ALWAYS">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <!-- SECTION DE GAUCHE : RECHERCHE ET LISTE DES ELEVES -->
+    <VBox spacing="15" HBox.hgrow="ALWAYS" minWidth="650">
+        <children>
+            <!-- Barre d'outils (Recherche + Filtre classe + Filtre statut + Nouveau) -->
+            <HBox spacing="15" alignment="CENTER_LEFT">
+                <children>
+                    <TextField fx:id="txtSearch" promptText="Rechercher par nom, prénom ou matricule..." styleClass="form-control" HBox.hgrow="ALWAYS" onKeyReleased="#handleSearch"/>
+                    
+                    <ComboBox fx:id="cmbFilterClasse" promptText="Filtrer par classe" styleClass="form-control" prefWidth="160" onAction="#handleFilterClasse"/>
+                    
+                    <ComboBox fx:id="cmbFilterStatut" promptText="Statut élèves" styleClass="form-control" prefWidth="160" onAction="#handleFilterStatut"/>
+                    
+                    <Button text="+ Nouvel Élève" styleClass="btn-primary" onAction="#handleNewEleve"/>
+                </children>
+            </HBox>
+
+            <!-- Tableau des élèves -->
+            <TableView fx:id="tblEleves" VBox.vgrow="ALWAYS">
+                <columns>
+                    <TableColumn fx:id="colMatricule" text="Matricule" prefWidth="110"/>
+                    <TableColumn fx:id="colNom" text="Nom" prefWidth="120"/>
+                    <TableColumn fx:id="colPrenoms" text="Prénoms" prefWidth="130"/>
+                    <TableColumn fx:id="colSexe" text="Sexe" prefWidth="70" style="-fx-alignment: CENTER;"/>
+                    <TableColumn fx:id="colClasse" text="Classe" prefWidth="80"/>
+                    <TableColumn fx:id="colDateNaissance" text="Date Naiss." prefWidth="90"/>
+                    <TableColumn fx:id="colNumeroAppel" text="N° Appel" prefWidth="65"/>
+                    <TableColumn fx:id="colContactParent" text="Parent / Tuteur (Contact &amp; Profession)" prefWidth="180"/>
+                    <TableColumn fx:id="colAdresse" text="Adresse" prefWidth="110"/>
+                    <TableColumn fx:id="colActions" text="Actions &amp; Parcours" prefWidth="220" style="-fx-alignment: CENTER;"/>
+                </columns>
+            </TableView>
+
+            <!-- Pagination / Pied de liste -->
+            <HBox alignment="CENTER_RIGHT" spacing="10">
+                <children>
+                    <Button fx:id="btnPrevPage" text="Précédent" styleClass="btn-secondary" onAction="#handlePrevPage"/>
+                    <Label fx:id="lblPaginationInfo" text="Page 1 / 1" style="-fx-text-fill: white;"/>
+                    <Button fx:id="btnNextPage" text="Suivant" styleClass="btn-secondary" onAction="#handleNextPage"/>
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+
+    <!-- SECTION DE DROITE : DETAILS ET EDITION (FORMULAIRE) -->
+    <VBox spacing="15" styleClass="kpi-card" prefWidth="420" minWidth="400" alignment="TOP_CENTER">
+        <padding>
+            <Insets top="15" right="15" bottom="15" left="15"/>
+        </padding>
+        <children>
+            <Label fx:id="lblFormTitle" text="Fiche Élève" style="-fx-text-fill: #FFD700; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+            
+            <Separator opacity="0.1"/>
+
+            <!-- Cadre Photo -->
+            <VBox alignment="CENTER" spacing="8">
+                <children>
+                    <StackPane style="-fx-border-color: rgba(255,255,255,0.15); -fx-border-width: 1px; -fx-border-radius: 8px; -fx-background-color: rgba(0,0,0,0.2); -fx-background-radius: 8px;" prefWidth="100" prefHeight="115" maxWidth="100" maxHeight="115">
+                        <children>
+                            <ImageView fx:id="imgPhoto" fitWidth="98" fitHeight="113" preserveRatio="true"/>
+                            <Label fx:id="lblPhotoPlaceholder" text="Pas de photo" style="-fx-text-fill: rgba(255,255,255,0.3); -fx-font-size: 11px;"/>
+                        </children>
+                    </StackPane>
+                    <HBox spacing="10" alignment="CENTER">
+                        <children>
+                            <Button text="Parcourir..." styleClass="btn-secondary" style="-fx-padding: 4px 8px; -fx-font-size: 11px;" onAction="#handleBrowsePhoto"/>
+                            <Button text="Supprimer" styleClass="btn-danger" style="-fx-padding: 4px 8px; -fx-font-size: 11px;" onAction="#handleDeletePhoto"/>
+                        </children>
+                    </HBox>
+                </children>
+            </VBox>
+
+            <!-- Formulaire de saisie -->
+            <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;" VBox.vgrow="ALWAYS">
+                <content>
+                    <VBox spacing="10">
+                        <children>
+                            <Label text="--- Informations Élève ---" style="-fx-text-fill: #FFD700; -fx-font-size: 12px; -fx-font-weight: bold;"/>
+
+                            <VBox spacing="4">
+                                <Label text="Matricule (Auto)" styleClass="form-label"/>
+                                <TextField fx:id="txtMatricule" styleClass="form-control" disable="true"/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label text="Nom *" styleClass="form-label"/>
+                                <TextField fx:id="txtNom" styleClass="form-control" promptText="Nom de famille"/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label text="Prénoms" styleClass="form-label"/>
+                                <TextField fx:id="txtPrenoms" styleClass="form-control" promptText="Prénoms"/>
+                            </VBox>
+
+                            <HBox spacing="10">
+                                <children>
+                                    <VBox spacing="4" HBox.hgrow="ALWAYS">
+                                        <Label text="Date Naissance *" styleClass="form-label"/>
+                                        <DatePicker fx:id="dpDateNaissance" styleClass="form-control" prefWidth="140"/>
+                                    </VBox>
+                                    <VBox spacing="4" prefWidth="100">
+                                        <Label text="Sexe *" styleClass="form-label"/>
+                                        <ComboBox fx:id="cmbSexe" styleClass="form-control" promptText="Sexe"/>
+                                    </VBox>
+                                    <VBox spacing="4" prefWidth="70">
+                                        <Label text="N° Appel *" styleClass="form-label"/>
+                                        <TextField fx:id="txtNumeroAppel" styleClass="form-control" promptText="Ex: 12"/>
+                                    </VBox>
+                                </children>
+                            </HBox>
+
+                            <VBox spacing="4">
+                                <Label text="Adresse Résidence" styleClass="form-label"/>
+                                <TextField fx:id="txtAdresse" styleClass="form-control" promptText="Adresse exacte de l'élève"/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label text="Classe *" styleClass="form-label"/>
+                                <ComboBox fx:id="cmbClasse" styleClass="form-control" maxWidth="Infinity" promptText="Sélectionner la classe"/>
+                            </VBox>
+
+                            <Separator opacity="0.1"/>
+                            <Label text="--- Parents &amp; Responsables ---" style="-fx-text-fill: #FFD700; -fx-font-size: 12px; -fx-font-weight: bold;"/>
+
+                            <VBox spacing="4">
+                                <Label text="Parent 1 (Père / Mère)" styleClass="form-label"/>
+                                <TextField fx:id="txtNomParent" styleClass="form-control" promptText="Nom et prénom du parent 1"/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label text="Profession Parent 1" styleClass="form-label"/>
+                                <TextField fx:id="txtProfessionParent" styleClass="form-control" promptText="Ex: Enseignant, Agriculteur..."/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label text="Téléphone Parent 1" styleClass="form-label"/>
+                                <TextField fx:id="txtTelParent" styleClass="form-control" promptText="Ex: +261 34 00 000 00"/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label text="Parent 2 (Optionnel)" styleClass="form-label"/>
+                                <TextField fx:id="txtNomParent2" styleClass="form-control" promptText="Nom et prénom du parent 2"/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label text="Profession Parent 2" styleClass="form-label"/>
+                                <TextField fx:id="txtProfessionParent2" styleClass="form-control" promptText="Ex: Commerçante, Fonctionnaire..."/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label text="Téléphone Parent 2" styleClass="form-label"/>
+                                <TextField fx:id="txtTelParent2" styleClass="form-control" promptText="Ex: +261 32 00 000 00"/>
+                            </VBox>
+
+                            <VBox spacing="4">
+                                <Label text="Tuteur Légal (Si pas de parent direct)" styleClass="form-label"/>
+                                <TextField fx:id="txtTuteur" styleClass="form-control" promptText="Nom &amp; Téléphone du tuteur"/>
+                            </VBox>
+                        </children>
+                    </VBox>
+                </content>
+            </ScrollPane>
+
+            <Separator opacity="0.1"/>
+
+            <!-- Actions de modification -->
+            <HBox spacing="10" alignment="CENTER_RIGHT">
+                <children>
+                    <Button fx:id="btnDelete" text="Supprimer" styleClass="btn-danger" onAction="#handleDeleteEleve"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Button text="Annuler" styleClass="btn-secondary" onAction="#handleCancel"/>
+                    <Button text="Enregistrer" styleClass="btn-primary" onAction="#handleSaveEleve"/>
+                </children>
+            </HBox>
+        </children>
+    </VBox>
+
+</HBox>

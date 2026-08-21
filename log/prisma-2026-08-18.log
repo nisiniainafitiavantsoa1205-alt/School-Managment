@@ -1,0 +1,1054 @@
+2026-08-18 15:11:18 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 15:11:18 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 15:11:19 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 15:11:19 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 15:11:19 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 15:11:20 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 15:11:20 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 15:11:21 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 15:11:21 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 15:11:21 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 15:11:22 [main] ERROR c.p.d.DatabaseConnectionManager - Échec de la création de la SessionFactory Hibernate.
+org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment] due to: Error calling Driver#connect [Fonctionnalité non supportée: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-224]] [null]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:276)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:223)
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:170)
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.build(MetadataBuildingProcess.java:129)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:449)
+	at org.hibernate.boot.internal.MetadataBuilderImpl.build(MetadataBuilderImpl.java:101)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:910)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:960)
+	at com.prisma.database.DatabaseConnectionManager.getSessionFactory(DatabaseConnectionManager.java:57)
+	at com.prisma.database.DatabaseConnectionTest.setUp(DatabaseConnectionTest.java:21)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:728)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:156)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptLifecycleMethod(TimeoutExtension.java:128)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptBeforeAllMethod(TimeoutExtension.java:70)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:103)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:93)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:92)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:86)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeBeforeAllMethods$13(ClassBasedTestDescriptor.java:412)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeBeforeAllMethods(ClassBasedTestDescriptor.java:410)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:216)
+	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.before(ClassBasedTestDescriptor.java:85)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:148)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47)
+	at org.apache.maven.surefire.junitplatform.LazyLauncher.execute(LazyLauncher.java:56)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:184)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:148)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:122)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+Caused by: org.hibernate.exception.GenericJDBCException: Error calling Driver#connect [Fonctionnalité non supportée: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-224]] [null]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.convertSqlException(BasicConnectionCreator.java:134)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:43)
+	at org.hibernate.engine.jdbc.connections.internal.BasicConnectionCreator.createConnection(BasicConnectionCreator.java:61)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.addConnections(DriverManagerConnectionProviderImpl.java:499)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections.<init>(DriverManagerConnectionProviderImpl.java:372)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl$PooledConnections$Builder.build(DriverManagerConnectionProviderImpl.java:550)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.buildPool(DriverManagerConnectionProviderImpl.java:102)
+	at org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl.configure(DriverManagerConnectionProviderImpl.java:82)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.configureService(StandardServiceRegistryImpl.java:136)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:247)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.buildJdbcConnectionAccess(JdbcEnvironmentInitiator.java:395)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:262)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:107)
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:68)
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130)
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263)
+	... 72 common frames omitted
+Caused by: org.h2.jdbc.JdbcSQLFeatureNotSupportedException: Fonctionnalité non supportée: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE"
+Feature not supported: "AUTO_SERVER=TRUE && DB_CLOSE_ON_EXIT=FALSE" [50100-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:568)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.getUnsupportedException(DbException.java:287)
+	at org.h2.engine.Database.<init>(Database.java:280)
+	at org.h2.engine.Engine.openSession(Engine.java:92)
+	at org.h2.engine.Engine.openSession(Engine.java:222)
+	at org.h2.engine.Engine.createSession(Engine.java:201)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:343)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:125)
+	at org.h2.Driver.connect(Driver.java:59)
+	at org.hibernate.engine.jdbc.connections.internal.DriverConnectionCreator.makeConnection(DriverConnectionCreator.java:40)
+	... 87 common frames omitted
+2026-08-18 15:11:54 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 15:11:54 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 15:11:55 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 15:11:55 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 15:11:55 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 15:11:56 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 15:11:56 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 15:11:56 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 15:11:57 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 15:11:57 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 15:11:59 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 15:11:59 [main] INFO  c.p.d.DatabaseConnectionManager - La table utilisateurs est vide. Initialisation de la base de données avec data.sql...
+2026-08-18 15:11:59 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation des données de base réussie.
+2026-08-18 15:11:59 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 15:11:59 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 19:19:47 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 19:19:47 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 19:19:48 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 19:19:48 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 19:19:48 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 19:19:49 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 19:19:50 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 19:19:50 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 19:19:51 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 19:19:51 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 19:19:54 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 19:19:54 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 19:19:54 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 19:22:41 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 19:22:41 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 19:22:42 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 19:22:42 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 19:22:42 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 19:22:43 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 19:22:43 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 19:22:44 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 19:22:44 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 19:22:45 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 19:22:47 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 19:22:48 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 19:22:48 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 19:37:55 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-18 19:37:55 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 19:37:56 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 19:37:58 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 19:38:16 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-18 19:38:43 [Thread-7] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: Nisi
+2026-08-18 19:40:11 [Thread-8] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 19:40:26 [Thread-9] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 19:42:44 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 19:42:44 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 19:42:45 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 19:42:45 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 19:42:46 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 19:42:47 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 19:42:47 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 19:42:48 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 19:42:48 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 19:42:49 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 19:42:51 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 19:42:51 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 19:42:51 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 19:43:28 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-18 19:43:29 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 19:43:30 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 19:43:32 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 19:43:33 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - La table utilisateurs est vide. Initialisation de la base de données avec data.sql...
+2026-08-18 19:43:33 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation des données de base réussie.
+2026-08-18 19:43:59 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-18 19:44:18 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 19:44:18 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-18 19:44:18 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 19:44:43 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 19:44:46 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 19:44:58 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 19:44:59 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 19:45:14 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 19:45:26 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 19:45:29 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 19:45:48 [JavaFX Application Thread] INFO  com.prisma.App - Fermeture de l'application PRISMA...
+2026-08-18 19:45:48 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 19:45:48 [JavaFX Application Thread] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 19:49:38 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 19:49:38 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 19:49:39 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 19:49:39 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 19:49:39 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 19:49:40 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 19:49:41 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 19:49:41 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 19:49:42 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 19:49:42 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 19:49:44 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 19:49:45 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 19:49:45 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 19:50:19 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-18 19:50:20 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 19:50:21 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 19:50:23 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 19:50:57 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-18 19:51:14 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 19:51:14 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-18 19:51:14 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 19:51:41 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 19:53:32 [Thread-11] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: NISINIAINA Fitiavantsoa
+2026-08-18 19:53:36 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 19:53:41 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 19:53:44 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 19:53:58 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 19:54:21 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 19:54:22 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 19:54:48 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 19:55:56 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 19:56:00 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 19:56:04 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 19:56:10 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 19:56:14 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 19:56:26 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 19:56:34 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 19:56:49 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 19:56:50 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 19:56:52 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 19:58:37 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:02:24 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:02:30 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 20:02:34 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:02:57 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:03:03 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:03:14 [Thread-66] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 1
+2026-08-18 20:05:44 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:07:48 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 20:07:48 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 20:07:49 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 20:07:49 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 20:07:49 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 20:07:50 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 20:07:51 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 20:07:52 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 20:07:52 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 20:07:52 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 20:07:53 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-18 20:07:53 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-18 20:07:55 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 20:07:55 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 20:07:55 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 20:08:16 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-18 20:08:17 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 20:08:17 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 20:08:17 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-18 20:08:18 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-18 20:08:20 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 20:08:57 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-18 20:09:42 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 20:09:42 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-18 20:09:42 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:10:14 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:13:38 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:14:17 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:14:19 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:16:21 [Thread-20] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: NISINIAINA Fitiavantsoa
+2026-08-18 20:16:25 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:16:27 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:16:29 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:19:43 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:19:50 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:20:03 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:20:11 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:20:18 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:20:40 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:20:42 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:20:58 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:21:00 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:22:53 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:23:07 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 20:23:09 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:23:27 [Thread-88] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:23:27 [Thread-88] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:23:48 [Thread-89] INFO  com.prisma.report.ReportServiceImpl - Génération PDF de classe : 1 bulletins
+2026-08-18 20:23:49 [JavaFX Application Thread] ERROR c.p.controller.BulletinController - Erreur génération PDF
+net.sf.jasperreports.engine.JRException: org.xml.sax.SAXParseException; lineNumber: 263; columnNumber: 92; cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:285)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:268)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:257)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:235)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:342)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:609)
+	at com.prisma.report.ReportServiceImpl.genererBulletinsClassePdf(ReportServiceImpl.java:92)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:332)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:329)
+	at javafx.graphics@21.0.2/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:850)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:353)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2736)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:137)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:629)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1892)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:281)
+	... 11 common frames omitted
+2026-08-18 20:23:59 [Thread-90] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:23:59 [Thread-90] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:24:14 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:25:16 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 20:25:16 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 20:25:17 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 20:25:17 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 20:25:18 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 20:25:19 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 20:25:19 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 20:25:20 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 20:25:20 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 20:25:21 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 20:25:21 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-18 20:25:21 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-18 20:25:23 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 20:25:23 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 20:25:23 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 20:25:24 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:25:34 [Thread-98] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:25:35 [Thread-98] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:25:42 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:25:49 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:28:38 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:28:46 [Thread-122] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:28:46 [Thread-122] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:28:55 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 20:28:56 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:28:57 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:29:03 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:29:18 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:29:23 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:30:23 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:30:26 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:30:27 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:30:28 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 20:30:30 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:30:31 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:30:33 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:30:39 [Thread-158] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:30:39 [Thread-158] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:31:01 [Thread-159] INFO  com.prisma.report.ReportServiceImpl - Génération PDF de classe : 1 bulletins
+2026-08-18 20:31:01 [JavaFX Application Thread] ERROR c.p.controller.BulletinController - Erreur génération PDF
+net.sf.jasperreports.engine.JRException: org.xml.sax.SAXParseException; lineNumber: 263; columnNumber: 92; cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:285)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:268)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:257)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:235)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:342)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:609)
+	at com.prisma.report.ReportServiceImpl.genererBulletinsClassePdf(ReportServiceImpl.java:92)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:332)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:329)
+	at javafx.graphics@21.0.2/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:850)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:353)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2736)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:137)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:629)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1892)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:281)
+	... 11 common frames omitted
+2026-08-18 20:31:23 [Thread-160] INFO  com.prisma.report.ReportServiceImpl - Génération PDF de classe : 1 bulletins
+2026-08-18 20:31:23 [JavaFX Application Thread] ERROR c.p.controller.BulletinController - Erreur génération PDF
+net.sf.jasperreports.engine.JRException: org.xml.sax.SAXParseException; lineNumber: 263; columnNumber: 92; cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:285)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:268)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:257)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:235)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:342)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:609)
+	at com.prisma.report.ReportServiceImpl.genererBulletinsClassePdf(ReportServiceImpl.java:92)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:332)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:329)
+	at javafx.graphics@21.0.2/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:850)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:353)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2736)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:137)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:629)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1892)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:281)
+	... 11 common frames omitted
+2026-08-18 20:31:47 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 20:31:47 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 20:31:48 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 20:31:48 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 20:31:49 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 20:31:49 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 20:31:50 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 20:31:51 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 20:31:51 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 20:31:52 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 20:31:52 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-18 20:31:52 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-18 20:31:54 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 20:31:54 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 20:31:54 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 20:32:42 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-18 20:32:43 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 20:32:44 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 20:32:44 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-18 20:32:44 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-18 20:32:46 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 20:32:52 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-18 20:33:07 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 20:33:07 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-18 20:33:07 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:33:17 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:33:19 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:33:26 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:33:36 [Thread-16] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:33:36 [Thread-16] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:36:04 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 20:36:59 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:37:07 [Thread-26] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:37:07 [Thread-26] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:37:17 [Thread-27] INFO  com.prisma.report.ReportServiceImpl - Génération PDF de classe : 1 bulletins
+2026-08-18 20:37:18 [JavaFX Application Thread] ERROR c.p.controller.BulletinController - Erreur génération PDF
+net.sf.jasperreports.engine.JRException: org.xml.sax.SAXParseException; lineNumber: 263; columnNumber: 92; cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:285)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:268)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:257)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:235)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:342)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:609)
+	at com.prisma.report.ReportServiceImpl.genererBulletinsClassePdf(ReportServiceImpl.java:92)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:332)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:1)
+	at javafx.graphics@21.0.2/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:850)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:353)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2736)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:137)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:629)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1892)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:281)
+	... 11 common frames omitted
+2026-08-18 20:37:24 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 20:37:55 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:37:57 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:38:20 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:38:24 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:38:28 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:38:42 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:38:42 [JavaFX Application Thread] ERROR c.prisma.controller.MainController - Erreur lors du chargement de la sous-vue : /fxml/notes.fxml
+javafx.fxml.LoadException: 
+/home/nisiniaina/Documents/projet_dev/Prisma_projet/target/classes/fxml/notes.fxml:7
+
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:935)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$InstanceDeclarationElement.processAttribute(FXMLLoader.java:983)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$Element.processStartElement(FXMLLoader.java:230)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$ValueElement.processStartElement(FXMLLoader.java:757)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2853)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at com.prisma.controller.MainController.changerVue(MainController.java:299)
+	at com.prisma.controller.MainController.handleNavNotes(MainController.java:177)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at javafx.base@21.0.2/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.2/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.2/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.2/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.2/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.2/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.2/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.2/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.2/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.2/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.2/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.2/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.2/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.2/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.2/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.2/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.2/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.2/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:138)
+	at javafx.graphics@21.0.2/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.2/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.2/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.2/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.2/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.2/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.2/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.lang.ClassNotFoundException: com.prisma.controller.NoteController
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:933)
+	... 63 common frames omitted
+2026-08-18 20:38:46 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:38:46 [JavaFX Application Thread] ERROR c.prisma.controller.MainController - Erreur lors du chargement de la sous-vue : /fxml/notes.fxml
+javafx.fxml.LoadException: 
+/home/nisiniaina/Documents/projet_dev/Prisma_projet/target/classes/fxml/notes.fxml:7
+
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader.constructLoadException(FXMLLoader.java:2722)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:935)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$InstanceDeclarationElement.processAttribute(FXMLLoader.java:983)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$Element.processStartElement(FXMLLoader.java:230)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$ValueElement.processStartElement(FXMLLoader.java:757)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader.processStartElement(FXMLLoader.java:2853)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2649)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader.loadImpl(FXMLLoader.java:2563)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader.load(FXMLLoader.java:2531)
+	at com.prisma.controller.MainController.changerVue(MainController.java:299)
+	at com.prisma.controller.MainController.handleNavNotes(MainController.java:177)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at javafx.base@21.0.2/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
+	at javafx.fxml@21.0.2/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
+	at javafx.base@21.0.2/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.2/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.base@21.0.2/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.2/javafx.scene.Node.fireEvent(Node.java:8875)
+	at javafx.controls@21.0.2/javafx.scene.control.Button.fire(Button.java:203)
+	at javafx.controls@21.0.2/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
+	at javafx.controls@21.0.2/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
+	at javafx.base@21.0.2/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
+	at javafx.base@21.0.2/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
+	at javafx.base@21.0.2/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at javafx.base@21.0.2/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.base@21.0.2/javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.graphics@21.0.2/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
+	at javafx.graphics@21.0.2/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
+	at javafx.graphics@21.0.2/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
+	at javafx.graphics@21.0.2/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
+	at javafx.graphics@21.0.2/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
+	at java.base/java.security.AccessController.doPrivileged(AccessController.java:138)
+	at javafx.graphics@21.0.2/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
+	at javafx.graphics@21.0.2/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
+	at javafx.graphics@21.0.2/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
+	at javafx.graphics@21.0.2/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
+	at javafx.graphics@21.0.2/com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at javafx.graphics@21.0.2/com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at javafx.graphics@21.0.2/com.sun.glass.ui.gtk.GtkApplication.lambda$runLoop$10(GtkApplication.java:263)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.lang.ClassNotFoundException: com.prisma.controller.NoteController
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490)
+	at javafx.fxml@21.0.2/javafx.fxml.FXMLLoader$ValueElement.processAttribute(FXMLLoader.java:933)
+	... 63 common frames omitted
+2026-08-18 20:38:49 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:38:50 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 20:39:13 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 20:39:13 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 20:39:14 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 20:39:14 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 20:39:15 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 20:39:16 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 20:39:16 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 20:39:17 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 20:39:17 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 20:39:18 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 20:39:18 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-18 20:39:18 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-18 20:39:20 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 20:39:20 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 20:39:20 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 20:40:22 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 20:40:22 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 20:40:23 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 20:40:23 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 20:40:23 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 20:40:24 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 20:40:25 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 20:40:26 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 20:40:26 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 20:40:26 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 20:40:27 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-18 20:40:27 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-18 20:40:28 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 20:40:29 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 20:40:29 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 20:40:54 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:41:04 [Thread-56] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:41:04 [Thread-56] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:41:22 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:41:44 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:41:47 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:42:00 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 20:42:38 [Thread-75] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 42101, SQLState: 42S01
+2026-08-18 20:42:38 [Thread-75] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - La table "APPRECIATIONS_SUGGESTIONS" existe déjà
+Table "APPRECIATIONS_SUGGESTIONS" already exists; SQL statement:
+          
+CREATE CACHED TABLE "PUBLIC"."APPRECIATIONS_SUGGESTIONS"(
+    "ID" INTEGER GENERATED BY DEFAULT AS IDENTITY(START WITH 1 RESTART WITH 5) NOT NULL,
+    "APPRECIATION_DEFAUT" CHARACTER VARYING(255) NOT NULL,
+    "NOTE_MAX" FLOAT(53) NOT NULL,
+    "NOTE_MIN" FLOAT(53) NOT NULL
+) [42101-224]
+2026-08-18 20:42:38 [JavaFX Application Thread] ERROR c.prisma.controller.ConfigController - Erreur lors de la restauration H2
+org.hibernate.exception.SQLGrammarException: error executing work [La table "APPRECIATIONS_SUGGESTIONS" existe déjà
+Table "APPRECIATIONS_SUGGESTIONS" already exists; SQL statement:
+          
+CREATE CACHED TABLE "PUBLIC"."APPRECIATIONS_SUGGESTIONS"(
+    "ID" INTEGER GENERATED BY DEFAULT AS IDENTITY(START WITH 1 RESTART WITH 5) NOT NULL,
+    "APPRECIATION_DEFAUT" CHARACTER VARYING(255) NOT NULL,
+    "NOTE_MAX" FLOAT(53) NOT NULL,
+    "NOTE_MIN" FLOAT(53) NOT NULL
+) [42101-224]] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:66)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.coordinateWork(JdbcCoordinatorImpl.java:308)
+	at org.hibernate.internal.AbstractSharedSessionContract.doWork(AbstractSharedSessionContract.java:1053)
+	at org.hibernate.internal.AbstractSharedSessionContract.doWork(AbstractSharedSessionContract.java:1041)
+	at com.prisma.controller.ConfigController$15.call(ConfigController.java:536)
+	at com.prisma.controller.ConfigController$15.call(ConfigController.java:531)
+	at javafx.graphics@21.0.2/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: La table "APPRECIATIONS_SUGGESTIONS" existe déjà
+Table "APPRECIATIONS_SUGGESTIONS" already exists; SQL statement:
+          
+CREATE CACHED TABLE "PUBLIC"."APPRECIATIONS_SUGGESTIONS"(
+    "ID" INTEGER GENERATED BY DEFAULT AS IDENTITY(START WITH 1 RESTART WITH 5) NOT NULL,
+    "APPRECIATION_DEFAUT" CHARACTER VARYING(255) NOT NULL,
+    "NOTE_MAX" FLOAT(53) NOT NULL,
+    "NOTE_MIN" FLOAT(53) NOT NULL
+) [42101-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.ddl.CreateTable.update(CreateTable.java:91)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.command.dml.RunScriptCommand.execute(RunScriptCommand.java:120)
+	at org.h2.command.dml.RunScriptCommand.update(RunScriptCommand.java:71)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:256)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:262)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231)
+	at com.prisma.controller.ConfigController$15.lambda$call$0(ConfigController.java:538)
+	at org.hibernate.jdbc.WorkExecutor.executeWork(WorkExecutor.java:39)
+	at org.hibernate.internal.AbstractSharedSessionContract.lambda$doWork$4(AbstractSharedSessionContract.java:1042)
+	at org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl.coordinateWork(JdbcCoordinatorImpl.java:303)
+	... 7 common frames omitted
+2026-08-18 20:42:42 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:42:50 [Thread-78] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:42:50 [Thread-78] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:43:03 [Thread-79] INFO  com.prisma.report.ReportServiceImpl - Génération PDF de classe : 1 bulletins
+2026-08-18 20:43:04 [JavaFX Application Thread] ERROR c.p.controller.BulletinController - Erreur génération PDF
+net.sf.jasperreports.engine.JRException: org.xml.sax.SAXParseException; lineNumber: 263; columnNumber: 92; cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:285)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:268)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:257)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:235)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:342)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:609)
+	at com.prisma.report.ReportServiceImpl.genererBulletinsClassePdf(ReportServiceImpl.java:92)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:332)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:1)
+	at javafx.graphics@21.0.2/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:850)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:353)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2736)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:137)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:629)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1892)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:281)
+	... 11 common frames omitted
+2026-08-18 20:43:15 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:43:19 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:43:20 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:43:21 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:43:27 [Thread-91] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:43:27 [Thread-91] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:43:34 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:43:35 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:43:41 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/eleves.fxml
+2026-08-18 20:43:48 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:45:01 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:45:03 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/classes.fxml
+2026-08-18 20:45:05 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/notes.fxml
+2026-08-18 20:46:45 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:46:47 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 20:46:48 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:46:56 [Thread-151] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:46:56 [Thread-151] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:47:15 [Thread-152] INFO  com.prisma.report.ReportServiceImpl - Génération PDF de classe : 1 bulletins
+2026-08-18 20:47:15 [JavaFX Application Thread] ERROR c.p.controller.BulletinController - Erreur génération PDF
+net.sf.jasperreports.engine.JRException: org.xml.sax.SAXParseException; lineNumber: 263; columnNumber: 92; cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:285)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:268)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:257)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:235)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:342)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:609)
+	at com.prisma.report.ReportServiceImpl.genererBulletinsClassePdf(ReportServiceImpl.java:92)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:332)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:1)
+	at javafx.graphics@21.0.2/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:850)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:353)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2736)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:137)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:629)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1892)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:281)
+	... 11 common frames omitted
+2026-08-18 20:48:21 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/config.fxml
+2026-08-18 20:49:08 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:49:16 [Thread-167] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 2
+2026-08-18 20:49:16 [Thread-167] WARN  c.p.service.impl.CalculServiceImpl - Aucun coefficient paramétré pour la classe 6a et la période 2eme Trimestre
+2026-08-18 20:49:16 [Thread-167] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:49:20 [Thread-169] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:49:20 [Thread-169] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:52:00 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 20:52:00 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 20:52:01 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 20:52:01 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 20:52:01 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 20:52:02 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 20:52:02 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 20:52:03 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 20:52:03 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 20:52:04 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 20:52:04 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-18 20:52:04 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-18 20:52:06 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 20:52:07 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 20:52:07 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 20:52:39 [Thread-172] INFO  com.prisma.report.ReportServiceImpl - Génération PDF de classe : 1 bulletins
+2026-08-18 20:52:39 [JavaFX Application Thread] ERROR c.p.controller.BulletinController - Erreur génération PDF
+net.sf.jasperreports.engine.JRException: org.xml.sax.SAXParseException; lineNumber: 263; columnNumber: 92; cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:285)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:268)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:257)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:235)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:342)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:609)
+	at com.prisma.report.ReportServiceImpl.genererBulletinsClassePdf(ReportServiceImpl.java:92)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:332)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:1)
+	at javafx.graphics@21.0.2/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:850)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:353)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2736)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:137)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:629)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1892)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:281)
+	... 11 common frames omitted
+2026-08-18 20:54:02 [Thread-173] INFO  com.prisma.report.ReportServiceImpl - Génération PDF de classe : 1 bulletins
+2026-08-18 20:54:02 [JavaFX Application Thread] ERROR c.p.controller.BulletinController - Erreur génération PDF
+net.sf.jasperreports.engine.JRException: org.xml.sax.SAXParseException; lineNumber: 263; columnNumber: 92; cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:285)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:268)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:257)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:235)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:342)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:609)
+	at com.prisma.report.ReportServiceImpl.genererBulletinsClassePdf(ReportServiceImpl.java:92)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:332)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:1)
+	at javafx.graphics@21.0.2/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:850)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:353)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2736)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:137)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:629)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1892)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:281)
+	... 11 common frames omitted
+2026-08-18 20:54:20 [JavaFX Application Thread] INFO  com.prisma.App - Démarrage de l'application PRISMA...
+2026-08-18 20:54:21 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 20:54:21 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 20:54:22 [Thread-2] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-18 20:54:22 [Thread-2] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-18 20:54:24 [Thread-2] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 20:54:31 [JavaFX Application Thread] INFO  com.prisma.App - Interface de connexion affichée après Splash Screen.
+2026-08-18 20:54:45 [Thread-7] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 20:54:45 [JavaFX Application Thread] INFO  c.prisma.controller.LoginController - Connexion réussie : redirection vers le tableau de bord
+2026-08-18 20:54:45 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/dashboard.fxml
+2026-08-18 20:55:03 [JavaFX Application Thread] INFO  c.prisma.controller.MainController - Chargement de la vue : /fxml/bulletins.fxml
+2026-08-18 20:55:11 [Thread-12] INFO  c.p.service.impl.CalculServiceImpl - Début du calcul des bulletins pour classeId = 1, periodeId = 1
+2026-08-18 20:55:11 [Thread-12] INFO  c.p.service.impl.CalculServiceImpl - Fin du calcul avec succès. 1 bulletins traités.
+2026-08-18 20:55:21 [Thread-13] INFO  com.prisma.report.ReportServiceImpl - Génération PDF de classe : 1 bulletins
+2026-08-18 20:55:22 [JavaFX Application Thread] ERROR c.p.controller.BulletinController - Erreur génération PDF
+net.sf.jasperreports.engine.JRException: org.xml.sax.SAXParseException; lineNumber: 263; columnNumber: 92; cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:285)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:268)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:257)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.load(JRXmlLoader.java:235)
+	at net.sf.jasperreports.engine.JasperCompileManager.compile(JasperCompileManager.java:342)
+	at net.sf.jasperreports.engine.JasperCompileManager.compileReport(JasperCompileManager.java:609)
+	at com.prisma.report.ReportServiceImpl.genererBulletinsClassePdf(ReportServiceImpl.java:92)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:362)
+	at com.prisma.controller.BulletinController$10.call(BulletinController.java:359)
+	at javafx.graphics@21.0.2/javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: org.xml.sax.SAXParseException: cvc-complex-type.3.2.2 : L'attribut 'forecolor' n'est pas autorisé dans l'élément 'font'.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:135)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:396)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:284)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator$XSIErrorReporter.reportError(XMLSchemaValidator.java:512)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.reportSchemaError(XMLSchemaValidator.java:3596)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.processAttributes(XMLSchemaValidator.java:2993)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.handleStartElement(XMLSchemaValidator.java:2287)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaValidator.emptyElement(XMLSchemaValidator.java:850)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.scanStartElement(XMLNSDocumentScannerImpl.java:353)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2736)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:137)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:629)
+	at org.apache.commons.digester.Digester.parse(Digester.java:1892)
+	at net.sf.jasperreports.engine.xml.JRXmlLoader.loadXML(JRXmlLoader.java:281)
+	... 11 common frames omitted
+2026-08-18 20:56:53 [main] INFO  c.p.service.impl.EleveServiceImpl - Suppression de l'élève ID: 5
+2026-08-18 20:56:53 [main] INFO  c.p.service.impl.EleveServiceImpl - Création de l'élève: DUPONT Jean
+2026-08-18 20:56:54 [main] INFO  c.p.service.impl.SecurityServiceImpl - Connexion réussie pour l'utilisateur: admin (rôle: ADMINISTRATEUR)
+2026-08-18 20:56:54 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion échouée pour le compte inexistant: inconnu
+2026-08-18 20:56:54 [main] WARN  c.p.service.impl.SecurityServiceImpl - Accès refusé pour l'utilisateur admin (rôle: ADMINISTRATEUR). Rôles requis: [DIRECTEUR, PROFESSEUR]
+2026-08-18 20:56:55 [main] WARN  c.p.service.impl.SecurityServiceImpl - Mot de passe incorrect pour l'utilisateur: admin
+2026-08-18 20:56:56 [main] INFO  c.p.service.impl.SecurityServiceImpl - Déconnexion de l'utilisateur: admin
+2026-08-18 20:56:56 [main] WARN  c.p.service.impl.SecurityServiceImpl - Tentative de connexion sur un compte désactivé: admin
+2026-08-18 20:56:57 [main] INFO  c.p.d.DatabaseConnectionManager - Initialisation de la SessionFactory Hibernate...
+2026-08-18 20:56:57 [main] INFO  c.p.d.DatabaseConnectionManager - Chargement des configurations depuis database.properties...
+2026-08-18 20:56:58 [main] WARN  o.hibernate.orm.connections.pooling - HHH10001002: Using built-in connection pool (not intended for production use)
+2026-08-18 20:56:58 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-08-18 20:56:59 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate initialisée avec succès.
+2026-08-18 20:57:00 [main] INFO  c.p.d.DatabaseConnectionManager - Fermeture de la SessionFactory Hibernate...
+2026-08-18 20:57:00 [main] INFO  c.p.d.DatabaseConnectionManager - SessionFactory Hibernate fermée.
+2026-08-18 20:57:19 [Thread-16] INFO  com.prisma.report.ReportServiceImpl - Génération PDF de classe : 1 bulletins
+2026-08-18 20:57:22 [Thread-16] INFO  com.prisma.report.ReportServiceImpl - PDF de classe généré : /home/nisiniaina/Images/bulletins_classe_6a_1er_Trimestre_20260818_205722.pdf

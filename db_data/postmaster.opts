@@ -1,0 +1,1 @@
+/usr/lib/postgresql/18/bin/postgres "-D" "/home/nisiniaina/Documents/projet_dev/Prisma_projet/db_data" "-p" "5433" "-k" "/home/nisiniaina/Documents/projet_dev/Prisma_projet/db_data"
